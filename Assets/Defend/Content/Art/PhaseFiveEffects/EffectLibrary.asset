@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf6a2f534128c2b478ecd8c0710e07cc, type: 3}
+  m_Name: EffectLibrary
+  m_EditorClassIdentifier: Defend.PhaseFiveEffects::Defend.PhaseFiveEffects.EffectLibrary
+  Entries:
+  - Id: AreaDischarge
+    Prefab: {fileID: 5913664738059979814, guid: 5e61b34b459e0054383327ba916d6f5b, type: 3}
+  - Id: AreaImpact
+    Prefab: {fileID: 6197269316127857135, guid: 54650832c5894204e8e5f8af3b376441, type: 3}
+  - Id: BuildingDestruction
+    Prefab: {fileID: 3695080884743223628, guid: 1389fb468d5406f429bf437b9fb93037, type: 3}
+  - Id: BuildingHit
+    Prefab: {fileID: 900715763298945272, guid: b490b8063c6e28c43882035bf9da8fd4, type: 3}
+  - Id: EnemyDeath
+    Prefab: {fileID: 6334614906120562504, guid: fb192cfad899e3f4a84789fcb15cdb58, type: 3}
+  - Id: EnemyHit
+    Prefab: {fileID: 3691295421727204563, guid: f6392ef4d63a6ee48b241b68e346361d, type: 3}
+  - Id: EnergyArrival
+    Prefab: {fileID: 667386957346767608, guid: ef2cb45537d807d48a9c4324d915cf6b, type: 3}
+  - Id: EnergyDisconnected
+    Prefab: {fileID: 3463623799183195439, guid: cd02a1553ecabb24789c77efef52ee7a, type: 3}
+  - Id: EnergyShortage
+    Prefab: {fileID: 8943886562706567134, guid: 2a8e7ab73acaa20429bef1bb115427ed, type: 3}
+  - Id: EnergyTransfer
+    Prefab: {fileID: 5643831473437552881, guid: 92a80c89b9983374690749b8bb4d37f7, type: 3}
+  - Id: HeavyContact
+    Prefab: {fileID: 4287002191665041186, guid: 1d74ce08457e41f4c9f772d39f614a44, type: 3}
+  - Id: HeavyImpact
+    Prefab: {fileID: 8152438082153504887, guid: d2eeda80d04df8a4b92ede91822169a5, type: 3}
+  - Id: HeavyLock
+    Prefab: {fileID: 7545830359046070912, guid: a046ad9dc863d044bb2391c39a4d9ccf, type: 3}
+  - Id: HeavyMuzzle
+    Prefab: {fileID: 167391685913756090, guid: feb2484aa8ef8f94c889fd92e38af666, type: 3}
+  - Id: HeavyTracer
+    Prefab: {fileID: 4417143066213298825, guid: a39e750ee8df3fe4ca296ee76258194f, type: 3}
+  - Id: PortSend
+    Prefab: {fileID: 2987537125719178146, guid: 7f0ccce9842b08144b885b7cd3b29842, type: 3}
+  - Id: RapidImpact
+    Prefab: {fileID: 9077793538399895942, guid: 4b9aafc55f58cf4439513a67170d4c44, type: 3}
+  - Id: RapidMuzzle
+    Prefab: {fileID: 8087646206187804492, guid: 3c8f269b9da1991449e57c93f79cf258, type: 3}
+  - Id: RapidTracer
+    Prefab: {fileID: 5187085201113153242, guid: 2a7b51d5f084d74418b2ba1507081d61, type: 3}
+  - Id: ReactorRunning
+    Prefab: {fileID: 2216850421104033515, guid: ab3cddb4d97146f40b95ac44ecb14140, type: 3}
+  - Id: RelayRunning
+    Prefab: {fileID: 3877567315024967155, guid: b7567364eef88464ea76ce7d6a38c7ea, type: 3}
+  - Id: RepairComplete
+    Prefab: {fileID: 6351427261821643386, guid: 7d83a81a5a4e94747bcd835f95016606, type: 3}
+  - Id: SearchMarker
+    Prefab: {fileID: 6118278441619258558, guid: 9f1cc7377c024d541b4ac9ff0e4aa151, type: 3}
+  - Id: ShieldBreak
+    Prefab: {fileID: 8519159258867411571, guid: 500b91af5bbf1cf41b4edeb12e6e8c98, type: 3}
+  - Id: ShieldHit
+    Prefab: {fileID: 6708071842088171927, guid: 07b6557de08fe6f4b8c3426974e072e3, type: 3}

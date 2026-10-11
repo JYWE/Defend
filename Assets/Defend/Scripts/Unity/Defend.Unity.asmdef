@@ -1,0 +1,11 @@
+{
+  "name": "Defend.Unity",
+  "rootNamespace": "Defend.Unity",
+  "references": [
+    "Defend.Simulation",
+    "Unity.InputSystem",
+    "Unity.ugui",
+    "Defend.PhaseFiveEffects"
+  ],
+  "autoReferenced": true
+}

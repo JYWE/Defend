@@ -1,0 +1,312 @@
+{
+  "asset": "Reactor",
+  "category": "Buildings",
+  "blender_version": "5.2.2 LTS",
+  "source": "ArtSource\\PhaseFive\\Buildings\\Reactor.blend",
+  "export": "Assets\\Defend\\Content\\Art\\PhaseFive\\Models\\Buildings\\Reactor.fbx",
+  "render_views_degrees": [
+    70,
+    36
+  ],
+  "source_before_save": {
+    "bounds_min": [
+      -0.41999998688697815,
+      -0.41999998688697815,
+      0.0
+    ],
+    "bounds_max": [
+      0.41999998688697815,
+      0.41999998688697815,
+      1.1100000143051147
+    ],
+    "dimensions": [
+      0.8399999737739563,
+      0.8399999737739563,
+      1.1100000143051147
+    ],
+    "triangles": 1600,
+    "mesh_count": 1,
+    "material_names": [
+      "PhaseFive_ArmorIvory",
+      "PhaseFive_EnergyCyan",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 4,
+    "meshes": [
+      {
+        "name": "Reactor_StaticStructure",
+        "triangles": 1600,
+        "vertices": 864,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_ArmorIvory",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_EnergyCyan"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.33024883546521927,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "Reactor",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "Reactor",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "source_reopened": {
+    "bounds_min": [
+      -0.41999998688697815,
+      -0.41999998688697815,
+      0.0
+    ],
+    "bounds_max": [
+      0.41999998688697815,
+      0.41999998688697815,
+      1.1100000143051147
+    ],
+    "dimensions": [
+      0.8399999737739563,
+      0.8399999737739563,
+      1.1100000143051147
+    ],
+    "triangles": 1600,
+    "mesh_count": 1,
+    "material_names": [
+      "PhaseFive_ArmorIvory",
+      "PhaseFive_EnergyCyan",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 4,
+    "meshes": [
+      {
+        "name": "Reactor_StaticStructure",
+        "triangles": 1600,
+        "vertices": 864,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_ArmorIvory",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_EnergyCyan"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.33024883546521927,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "Reactor",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "Reactor",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "fbx_reimported": {
+    "bounds_min": [
+      -0.41999998688697815,
+      -0.41999998688697815,
+      -6.842668653916917e-08
+    ],
+    "bounds_max": [
+      0.41999998688697815,
+      0.41999998688697815,
+      1.1100000143051147
+    ],
+    "dimensions": [
+      0.8399999737739563,
+      0.8399999737739563,
+      1.1100000827318013
+    ],
+    "triangles": 1600,
+    "mesh_count": 1,
+    "material_names": [
+      "PhaseFive_ArmorIvory",
+      "PhaseFive_EnergyCyan",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 4,
+    "meshes": [
+      {
+        "name": "Reactor_StaticStructure",
+        "triangles": 1600,
+        "vertices": 864,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_ArmorIvory",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_EnergyCyan"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.33024883546521955,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "ForwardReference",
+        "parent": "Reactor",
+        "world_position": [
+          0.0,
+          -0.5,
+          8.146034247147327e-08
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "Reactor",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "source_reopened": true,
+    "export_reimported": true,
+    "save_reopen_dimensions_equal": true,
+    "export_bounds_maximum_difference": 6.842668653916917e-08,
+    "export_bounds_match": true,
+    "triangles_match": true,
+    "mesh_count_match": true,
+    "material_names_match": true,
+    "grounded": true,
+    "positive_mesh_transforms": true,
+    "valid_surface_normals": true
+  }
+}

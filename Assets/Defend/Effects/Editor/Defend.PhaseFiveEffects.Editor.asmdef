@@ -1,0 +1,7 @@
+{
+  "name": "Defend.PhaseFiveEffects.Editor",
+  "rootNamespace": "Defend.PhaseFiveEffects.Editor",
+  "references": ["Defend.PhaseFiveEffects", "Unity.RenderPipelines.Universal.Runtime", "Unity.RenderPipelines.Core.Runtime"],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

@@ -45,6 +45,10 @@
 # Visual Studio cache directory
 .vs/
 
+# Python tool caches
+__pycache__/
+*.py[cod]
+
 # Gradle cache directory
 .gradle/
 

@@ -1,0 +1,699 @@
+{
+  "asset": "RapidTurret",
+  "category": "Buildings",
+  "blender_version": "5.2.2 LTS",
+  "source": "ArtSource\\PhaseFive\\Buildings\\RapidTurret.blend",
+  "export": "Assets\\Defend\\Content\\Art\\PhaseFive\\Models\\Buildings\\RapidTurret.fbx",
+  "render_views_degrees": [
+    70,
+    36
+  ],
+  "source_before_save": {
+    "bounds_min": [
+      -0.41999998688697815,
+      -0.5065000057220459,
+      0.0
+    ],
+    "bounds_max": [
+      0.41999998688697815,
+      0.41999998688697815,
+      0.6175000071525574
+    ],
+    "dimensions": [
+      0.8399999737739563,
+      0.926499992609024,
+      0.6175000071525574
+    ],
+    "triangles": 988,
+    "mesh_count": 3,
+    "material_names": [
+      "PhaseFive_ArmorIvory",
+      "PhaseFive_EnergyCyan",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 9,
+    "meshes": [
+      {
+        "name": "RapidTurret_StaticStructure",
+        "triangles": 292,
+        "vertices": 160,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_ArmorIvory",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_EnergyCyan"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.1560236204905288,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "RapidTurret_Barrels",
+        "triangles": 420,
+        "vertices": 224,
+        "material_slots": 2,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_MetalSteel"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.015793206696105625,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          -0.014999999664723873,
+          0.5199999809265137
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "RapidTurret_Turntable",
+        "triangles": 276,
+        "vertices": 152,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_ArmorIvory"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.0582833219547435,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.30000001192092896
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "RapidTurret",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "RapidTurret",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "TurretYaw",
+        "parent": "RapidTurret",
+        "world_position": [
+          0.0,
+          0.0,
+          0.30000001192092896
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.30000001192092896
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "BarrelRecoil",
+        "parent": "TurretYaw",
+        "world_position": [
+          0.0,
+          -0.014999999664723873,
+          0.5199999809265137
+        ],
+        "local_position": [
+          0.0,
+          -0.014999999664723873,
+          0.21999996900558472
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "MuzzleLeft",
+        "parent": "BarrelRecoil",
+        "world_position": [
+          -0.0949999988079071,
+          -0.5080000162124634,
+          0.5199999809265137
+        ],
+        "local_position": [
+          -0.0949999988079071,
+          -0.4930000305175781,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "MuzzleRight",
+        "parent": "BarrelRecoil",
+        "world_position": [
+          0.0949999988079071,
+          -0.5080000162124634,
+          0.5199999809265137
+        ],
+        "local_position": [
+          0.0949999988079071,
+          -0.4930000305175781,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "source_reopened": {
+    "bounds_min": [
+      -0.41999998688697815,
+      -0.5065000057220459,
+      0.0
+    ],
+    "bounds_max": [
+      0.41999998688697815,
+      0.41999998688697815,
+      0.6175000071525574
+    ],
+    "dimensions": [
+      0.8399999737739563,
+      0.926499992609024,
+      0.6175000071525574
+    ],
+    "triangles": 988,
+    "mesh_count": 3,
+    "material_names": [
+      "PhaseFive_ArmorIvory",
+      "PhaseFive_EnergyCyan",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 9,
+    "meshes": [
+      {
+        "name": "RapidTurret_StaticStructure",
+        "triangles": 292,
+        "vertices": 160,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_ArmorIvory",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_EnergyCyan"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.1560236204905288,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "RapidTurret_Barrels",
+        "triangles": 420,
+        "vertices": 224,
+        "material_slots": 2,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_MetalSteel"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.015793206696105625,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          -0.014999999664723873,
+          0.5199999809265137
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "RapidTurret_Turntable",
+        "triangles": 276,
+        "vertices": 152,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_ArmorIvory"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.0582833219547435,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.30000001192092896
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "RapidTurret",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "RapidTurret",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "TurretYaw",
+        "parent": "RapidTurret",
+        "world_position": [
+          0.0,
+          0.0,
+          0.30000001192092896
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.30000001192092896
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "BarrelRecoil",
+        "parent": "TurretYaw",
+        "world_position": [
+          0.0,
+          -0.014999999664723873,
+          0.5199999809265137
+        ],
+        "local_position": [
+          0.0,
+          -0.014999999664723873,
+          0.21999996900558472
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "MuzzleLeft",
+        "parent": "BarrelRecoil",
+        "world_position": [
+          -0.0949999988079071,
+          -0.5080000162124634,
+          0.5199999809265137
+        ],
+        "local_position": [
+          -0.0949999988079071,
+          -0.4930000305175781,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "MuzzleRight",
+        "parent": "BarrelRecoil",
+        "world_position": [
+          0.0949999988079071,
+          -0.5080000162124634,
+          0.5199999809265137
+        ],
+        "local_position": [
+          0.0949999988079071,
+          -0.4930000305175781,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "fbx_reimported": {
+    "bounds_min": [
+      -0.41999998688697815,
+      -0.5064999461174011,
+      -6.842668653916917e-08
+    ],
+    "bounds_max": [
+      0.41999998688697815,
+      0.41999998688697815,
+      0.6175000071525574
+    ],
+    "dimensions": [
+      0.8399999737739563,
+      0.9264999330043793,
+      0.6175000755792439
+    ],
+    "triangles": 988,
+    "mesh_count": 3,
+    "material_names": [
+      "PhaseFive_ArmorIvory",
+      "PhaseFive_EnergyCyan",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 9,
+    "meshes": [
+      {
+        "name": "RapidTurret_StaticStructure",
+        "triangles": 292,
+        "vertices": 160,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_ArmorIvory",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_EnergyCyan"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.15602362049052942,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "RapidTurret_Barrels",
+        "triangles": 420,
+        "vertices": 224,
+        "material_slots": 2,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_MetalSteel"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.0157932066868211,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          -0.014999914914369583,
+          0.5199999809265137
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "RapidTurret_Turntable",
+        "triangles": 276,
+        "vertices": 152,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_ArmorIvory"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.05828332193501174,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          4.88762061934267e-08,
+          0.30000001192092896
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "ForwardReference",
+        "parent": "RapidTurret",
+        "world_position": [
+          0.0,
+          -0.5,
+          8.146034247147327e-08
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "MuzzleLeft",
+        "parent": "BarrelRecoil",
+        "world_position": [
+          -0.0949999988079071,
+          -0.5079999566078186,
+          0.5200000405311584
+        ],
+        "local_position": [
+          -0.0949999988079071,
+          -0.4930000305175781,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "MuzzleRight",
+        "parent": "BarrelRecoil",
+        "world_position": [
+          0.0949999988079071,
+          -0.5079999566078186,
+          0.5200000405311584
+        ],
+        "local_position": [
+          0.0949999988079071,
+          -0.4930000305175781,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "BarrelRecoil",
+        "parent": "TurretYaw",
+        "world_position": [
+          0.0,
+          -0.014999914914369583,
+          0.5199999809265137
+        ],
+        "local_position": [
+          0.0,
+          -0.014999999664723873,
+          0.21999996900558472
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "TurretYaw",
+        "parent": "RapidTurret",
+        "world_position": [
+          0.0,
+          4.88762061934267e-08,
+          0.30000001192092896
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.30000001192092896
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "RapidTurret",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "source_reopened": true,
+    "export_reimported": true,
+    "save_reopen_dimensions_equal": true,
+    "export_bounds_maximum_difference": 6.842668653916917e-08,
+    "export_bounds_match": true,
+    "triangles_match": true,
+    "mesh_count_match": true,
+    "material_names_match": true,
+    "grounded": true,
+    "positive_mesh_transforms": true,
+    "valid_surface_normals": true
+  }
+}

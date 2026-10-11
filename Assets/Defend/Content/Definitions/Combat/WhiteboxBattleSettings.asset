@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea455e01014a354794467f79e502f07, type: 3}
+  m_Name: WhiteboxBattleSettings
+  m_EditorClassIdentifier: Defend.Unity::Defend.Unity.BattleSettingsAsset
+  maximumBuildings: 100
+  maximumLivingEnemies: 200
+  enemySpeedCellsPerSecond: 1.8
+  enemyAttackDamage: 8
+  enemyAttackIntervalTicks: 20
+  turretRange: 7
+  turretDamage: 20
+  turretEnergyPerShot: 2000
+  turretCooldownTicks: 8
+  shotDisplayTicks: 6
+  waves:
+  - enemyCount: 20
+    enemyHealth: 60
+    spawnIntervalTicks: 10
+    clearReward: 300
+  - enemyCount: 35
+    enemyHealth: 75
+    spawnIntervalTicks: 9
+    clearReward: 400
+  - enemyCount: 55
+    enemyHealth: 90
+    spawnIntervalTicks: 8
+    clearReward: 500
+  - enemyCount: 80
+    enemyHealth: 105
+    spawnIntervalTicks: 7
+    clearReward: 600
+  - enemyCount: 110
+    enemyHealth: 120
+    spawnIntervalTicks: 6
+    clearReward: 800

@@ -1,0 +1,131 @@
+{
+  "editorStopped": true,
+  "sceneReopened": true,
+  "renderSubmitted": true,
+  "scene": "Assets/Defend/Content/Art/PhaseFive/Scenes/PhaseFiveModelInspection.unity",
+  "render": "Docs/Art/PhaseFive/Previews/UnityModelInspection.png",
+  "evidenceScope": "Unity Editor offscreen URP render of saved inspection scene; not a gameplay frame or performance test.",
+  "motions": [
+    {
+      "asset": "RapidTurret",
+      "pivot": "TurretYaw",
+      "motion": "yaw_90_degrees",
+      "movingVertices": 1292,
+      "expectedPositionError": 2.07013542e-07,
+      "maximumMovement": 0.746252358,
+      "staticMovement": 0,
+      "restoredPositionError": 0,
+      "passed": true
+    },
+    {
+      "asset": "RapidTurret",
+      "pivot": "BarrelRecoil",
+      "motion": "recoil_004_meters",
+      "movingVertices": 700,
+      "expectedPositionError": 5.96046448e-08,
+      "maximumMovement": 0.04000005,
+      "staticMovement": 0,
+      "restoredPositionError": 0,
+      "passed": true
+    },
+    {
+      "asset": "HeavyTurret",
+      "pivot": "TurretYaw",
+      "motion": "yaw_90_degrees",
+      "movingVertices": 1282,
+      "expectedPositionError": 1.58707152e-07,
+      "maximumMovement": 0.7497,
+      "staticMovement": 0,
+      "restoredPositionError": 0,
+      "passed": true
+    },
+    {
+      "asset": "HeavyTurret",
+      "pivot": "BarrelRecoil",
+      "motion": "recoil_004_meters",
+      "movingVertices": 570,
+      "expectedPositionError": 1.49011612e-08,
+      "maximumMovement": 0.0400000066,
+      "staticMovement": 0,
+      "restoredPositionError": 0,
+      "passed": true
+    },
+    {
+      "asset": "AreaTurret",
+      "pivot": "TurretYaw",
+      "motion": "yaw_90_degrees",
+      "movingVertices": 1542,
+      "expectedPositionError": 1.44664114e-07,
+      "maximumMovement": 0.5727566,
+      "staticMovement": 0,
+      "restoredPositionError": 0,
+      "passed": true
+    },
+    {
+      "asset": "AreaTurret",
+      "pivot": "BarrelRecoil",
+      "motion": "recoil_004_meters",
+      "movingVertices": 1398,
+      "expectedPositionError": 0,
+      "maximumMovement": 0.0400000066,
+      "staticMovement": 0,
+      "restoredPositionError": 0,
+      "passed": true
+    },
+    {
+      "asset": "StandardEnemy",
+      "pivot": "LegFrontLeftPivot",
+      "motion": "leg_12_degrees",
+      "movingVertices": 226,
+      "expectedPositionError": 3.332001e-08,
+      "maximumMovement": 0.08049371,
+      "staticMovement": 0,
+      "restoredPositionError": 0,
+      "passed": true
+    },
+    {
+      "asset": "StandardEnemy",
+      "pivot": "LegFrontRightPivot",
+      "motion": "leg_12_degrees",
+      "movingVertices": 226,
+      "expectedPositionError": 3.332001e-08,
+      "maximumMovement": 0.08049371,
+      "staticMovement": 0,
+      "restoredPositionError": 0,
+      "passed": true
+    },
+    {
+      "asset": "StandardEnemy",
+      "pivot": "LegRearLeftPivot",
+      "motion": "leg_12_degrees",
+      "movingVertices": 226,
+      "expectedPositionError": 5.96046448e-08,
+      "maximumMovement": 0.0804937258,
+      "staticMovement": 0,
+      "restoredPositionError": 0,
+      "passed": true
+    },
+    {
+      "asset": "StandardEnemy",
+      "pivot": "LegRearRightPivot",
+      "motion": "leg_12_degrees",
+      "movingVertices": 226,
+      "expectedPositionError": 5.96046448e-08,
+      "maximumMovement": 0.0804937258,
+      "staticMovement": 0,
+      "restoredPositionError": 0,
+      "passed": true
+    },
+    {
+      "asset": "HeavyEnemy",
+      "pivot": "ImpactPivot",
+      "motion": "impact_008_meters",
+      "movingVertices": 96,
+      "expectedPositionError": 5.96046448e-08,
+      "maximumMovement": 0.08000004,
+      "staticMovement": 0,
+      "restoredPositionError": 0,
+      "passed": true
+    }
+  ]
+}

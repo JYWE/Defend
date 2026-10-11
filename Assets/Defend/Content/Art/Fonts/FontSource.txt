@@ -1,0 +1,7 @@
+字体名称：Noto Sans CJK SC Regular
+上游项目：https://github.com/notofonts/noto-cjk
+字体源文件：https://github.com/notofonts/noto-cjk/blob/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf
+许可源文件：https://github.com/notofonts/noto-cjk/blob/main/Sans/LICENSE
+许可：SIL Open Font License 1.1，全文见 NotoSansCJK-License.txt。
+本项目使用未修改的完整字体文件。字体内含版权元数据；打包游戏时应一并分发许可文本。
+取得日期：2026-10-10。

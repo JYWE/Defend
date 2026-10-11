@@ -1,0 +1,294 @@
+{
+  "asset": "RockLowB",
+  "category": "Environment",
+  "blender_version": "5.2.2 LTS",
+  "source": "ArtSource\\PhaseFive\\Environment\\RockLowB.blend",
+  "export": "Assets\\Defend\\Content\\Art\\PhaseFive\\Models\\Environment\\RockLowB.fbx",
+  "render_views_degrees": [
+    70,
+    36
+  ],
+  "source_before_save": {
+    "bounds_min": [
+      -0.46000000834465027,
+      -0.29499998688697815,
+      0.0
+    ],
+    "bounds_max": [
+      0.46000000834465027,
+      0.29499998688697815,
+      0.2800000011920929
+    ],
+    "dimensions": [
+      0.9200000166893005,
+      0.5899999737739563,
+      0.2800000011920929
+    ],
+    "triangles": 46,
+    "mesh_count": 1,
+    "material_names": [
+      "PhaseFive_RockSlate"
+    ],
+    "material_slot_count": 1,
+    "meshes": [
+      {
+        "name": "RockLowB_Static",
+        "triangles": 46,
+        "vertices": 25,
+        "material_slots": 1,
+        "materials": [
+          "PhaseFive_RockSlate"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.07145299967855465,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "RockLowB",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "RockLowB",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "source_reopened": {
+    "bounds_min": [
+      -0.46000000834465027,
+      -0.29499998688697815,
+      0.0
+    ],
+    "bounds_max": [
+      0.46000000834465027,
+      0.29499998688697815,
+      0.2800000011920929
+    ],
+    "dimensions": [
+      0.9200000166893005,
+      0.5899999737739563,
+      0.2800000011920929
+    ],
+    "triangles": 46,
+    "mesh_count": 1,
+    "material_names": [
+      "PhaseFive_RockSlate"
+    ],
+    "material_slot_count": 1,
+    "meshes": [
+      {
+        "name": "RockLowB_Static",
+        "triangles": 46,
+        "vertices": 25,
+        "material_slots": 1,
+        "materials": [
+          "PhaseFive_RockSlate"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.07145299967855465,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "RockLowB",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "RockLowB",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "fbx_reimported": {
+    "bounds_min": [
+      -0.46000000834465027,
+      -0.29499998688697815,
+      -4.806160092130085e-08
+    ],
+    "bounds_max": [
+      0.46000000834465027,
+      0.29499998688697815,
+      0.2799999713897705
+    ],
+    "dimensions": [
+      0.9200000166893005,
+      0.5899999737739563,
+      0.28000001945137143
+    ],
+    "triangles": 46,
+    "mesh_count": 1,
+    "material_names": [
+      "PhaseFive_RockSlate"
+    ],
+    "material_slot_count": 1,
+    "meshes": [
+      {
+        "name": "RockLowB_Static",
+        "triangles": 46,
+        "vertices": 25,
+        "material_slots": 1,
+        "materials": [
+          "PhaseFive_RockSlate"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.07094549944681675,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "ForwardReference",
+        "parent": "RockLowB",
+        "world_position": [
+          0.0,
+          -0.5,
+          8.146034247147327e-08
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "RockLowB",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "source_reopened": true,
+    "export_reimported": true,
+    "save_reopen_dimensions_equal": true,
+    "export_bounds_maximum_difference": 4.806160092130085e-08,
+    "export_bounds_match": true,
+    "triangles_match": true,
+    "mesh_count_match": true,
+    "material_names_match": true,
+    "grounded": true,
+    "positive_mesh_transforms": true,
+    "valid_surface_normals": true
+  }
+}

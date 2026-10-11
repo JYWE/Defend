@@ -1,0 +1,19 @@
+DELIVERY high=72000000, normal=36000000, low=18000000, total=126000000
+PASS SharedRelayBottleneckPreservesFourTwoOneEffectiveDeliveryShares
+UNEQUAL_LOSS nearby=36474351, distant=34647552, relaySent=107989498, expired=10658920
+FAIL SharedRelayChargesUnequalLossBranchesByEffectiveDelivery NUnit.Framework.AssertionException:   经过共同中继后的出口仲裁仍应按最终有效到货计费。近端到货 36474351，远端到货 34647552，中继收到 118648248，中继发出 107989498，窗口内滞留损失 10658920，窗口结束中继库存 90831。
+  Expected: 1 +/- 0.050000000000000003d
+  But was:  1.052725196862393d
+
+   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args)
+   at Defend.Tests.EnergyPriorityTests.SharedRelayChargesUnequalLossBranchesByEffectiveDelivery() in C:\Users\legion\AppData\Local\Temp\DefendEnergyFairness-3c0b5575a2bc4deb8ef6f90567b9966c\Tests\EnergyPriorityTests.cs:line 95
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+DELIVERY high=144000000, normal=72000000, low=36000000, total=252000000
+PASS SharedSupplyFollowsFourTwoOneWeightsWithoutStarvingLowPriority
+PASS FiniteSeventyUnitSupplyRespectsFortyUnitDemandCaps
+PASS SatisfiedHighPriorityConsumerReleasesUnusedShareToOthers
+PASS EqualWeightsAreChargedByEffectiveDeliveryDespiteDifferentLosses
+PASS PriorityChangesDuringOperationAffectSubsequentDeliveredShares
+PASS UnreachableHighPriorityConsumerDoesNotBlockReachableLowPriorityConsumer
+passed=7, failed=1; long statistical window=36000 simulation steps (30 minutes at 20 Hz)

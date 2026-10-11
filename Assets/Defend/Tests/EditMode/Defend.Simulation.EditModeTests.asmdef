@@ -1,0 +1,10 @@
+{
+  "name": "Defend.Simulation.EditModeTests",
+  "rootNamespace": "Defend.Tests",
+  "references": ["Defend.Simulation"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": false,
+  "overrideReferences": false,
+  "noEngineReferences": true
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Overview",
+    "source_frames": 96,
+    "gif_frames": 96,
+    "milliseconds": 3200,
+    "bytes": 4905082,
+    "source": "Unity URP RenderRequest in actual Play Mode, fixed 1/30 second presentation steps",
+    "performance_evidence": false
+  },
+  {
+    "name": "Close",
+    "source_frames": 96,
+    "gif_frames": 91,
+    "milliseconds": 3200,
+    "bytes": 609994,
+    "source": "Unity URP RenderRequest in actual Play Mode, fixed 1/30 second presentation steps",
+    "performance_evidence": false
+  },
+  {
+    "name": "Damage",
+    "source_frames": 96,
+    "gif_frames": 96,
+    "milliseconds": 3200,
+    "bytes": 2379235,
+    "source": "Unity URP RenderRequest in actual Play Mode, fixed 1/30 second presentation steps",
+    "performance_evidence": false
+  },
+  {
+    "name": "Energy",
+    "source_frames": 96,
+    "gif_frames": 96,
+    "milliseconds": 3200,
+    "bytes": 1129640,
+    "source": "Unity URP RenderRequest in actual Play Mode, fixed 1/30 second presentation steps",
+    "performance_evidence": false
+  },
+  {
+    "name": "Shield",
+    "source_frames": 96,
+    "gif_frames": 25,
+    "milliseconds": 3200,
+    "bytes": 113966,
+    "source": "Unity URP RenderRequest in actual Play Mode, fixed 1/30 second presentation steps",
+    "performance_evidence": false
+  }
+]

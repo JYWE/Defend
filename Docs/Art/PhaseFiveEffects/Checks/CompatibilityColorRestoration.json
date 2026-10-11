@@ -1,0 +1,25 @@
+{
+  "verified_materials": [
+    "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_ArmorIvory.mat",
+    "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_EnemyOrange.mat",
+    "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_EnergyCyan.mat",
+    "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_GroundConcrete.mat",
+    "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_MetalSteel.mat",
+    "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_RockSlate.mat",
+    "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_RubberDark.mat",
+    "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_StructureDark.mat"
+  ],
+  "restored_this_pass": [
+    "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_EnergyCyan.mat",
+    "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_GroundConcrete.mat",
+    "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_MetalSteel.mat",
+    "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_RockSlate.mat",
+    "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_RubberDark.mat",
+    "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_StructureDark.mat"
+  ],
+  "allowed_observed_fields": [
+    "compatibility _Color",
+    "EnergyCyan _EMISSION keyword"
+  ],
+  "guard": "full direct byte equality with captured baseline after the narrow corrections"
+}

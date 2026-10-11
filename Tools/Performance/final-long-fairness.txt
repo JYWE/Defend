@@ -1,0 +1,12 @@
+DELIVERY high=72000000, normal=36000000, low=18000000, total=126000000
+PASS SharedRelayBottleneckPreservesFourTwoOneEffectiveDeliveryShares
+UNEQUAL_LOSS nearby=35282067, distant=35282443, relaySent=107988723, expired=7391246
+PASS SharedRelayChargesUnequalLossBranchesByEffectiveDelivery
+DELIVERY high=144000000, normal=72000000, low=36000000, total=252000000
+PASS SharedSupplyFollowsFourTwoOneWeightsWithoutStarvingLowPriority
+PASS FiniteSeventyUnitSupplyRespectsFortyUnitDemandCaps
+PASS SatisfiedHighPriorityConsumerReleasesUnusedShareToOthers
+PASS EqualWeightsAreChargedByEffectiveDeliveryDespiteDifferentLosses
+PASS PriorityChangesDuringOperationAffectSubsequentDeliveredShares
+PASS UnreachableHighPriorityConsumerDoesNotBlockReachableLowPriorityConsumer
+passed=8, failed=0; long statistical window=36000 simulation steps (30 minutes at 20 Hz)

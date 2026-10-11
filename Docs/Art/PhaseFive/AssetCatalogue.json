@@ -1,0 +1,226 @@
+{
+  "date": "2026-10-10",
+  "asset_count": 13,
+  "triangles": 9188,
+  "renderers": 24,
+  "material_slots": 76,
+  "shared_material_count": 8,
+  "single_asset_blend_count": 13,
+  "fbx_count": 13,
+  "prefab_count": 13,
+  "normalized_unity_mesh_count": 24,
+  "preview_png_count": 30,
+  "unity_motion_checks": 11,
+  "protected_files_unchanged": 378,
+  "all_direct_checks_passed": true,
+  "assets": [
+    {
+      "name": "Reactor",
+      "label": "反应堆",
+      "category": "Buildings",
+      "dimensions_width_depth_height": [
+        0.8399999737739563,
+        0.8399999737739563,
+        1.1100000143051147
+      ],
+      "triangles": 1600,
+      "renderers": 1,
+      "material_slots": 4,
+      "source": "ArtSource/PhaseFive/Buildings/Reactor.blend",
+      "fbx": "Assets/Defend/Content/Art/PhaseFive/Models/Buildings/Reactor.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/Reactor.prefab"
+    },
+    {
+      "name": "Relay",
+      "label": "中继器",
+      "category": "Buildings",
+      "dimensions_width_depth_height": [
+        0.7200000286102295,
+        0.7200000286102295,
+        1.1649999618530273
+      ],
+      "triangles": 820,
+      "renderers": 1,
+      "material_slots": 4,
+      "source": "ArtSource/PhaseFive/Buildings/Relay.blend",
+      "fbx": "Assets/Defend/Content/Art/PhaseFive/Models/Buildings/Relay.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/Relay.prefab"
+    },
+    {
+      "name": "RapidTurret",
+      "label": "连射炮",
+      "category": "Buildings",
+      "dimensions_width_depth_height": [
+        0.8399999737739563,
+        0.926499992609024,
+        0.6175000071525574
+      ],
+      "triangles": 988,
+      "renderers": 3,
+      "material_slots": 9,
+      "source": "ArtSource/PhaseFive/Buildings/RapidTurret.blend",
+      "fbx": "Assets/Defend/Content/Art/PhaseFive/Models/Buildings/RapidTurret.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/RapidTurret.prefab"
+    },
+    {
+      "name": "HeavyTurret",
+      "label": "重击炮",
+      "category": "Buildings",
+      "dimensions_width_depth_height": [
+        0.8799999952316284,
+        0.9590000510215759,
+        0.7050000429153442
+      ],
+      "triangles": 956,
+      "renderers": 3,
+      "material_slots": 10,
+      "source": "ArtSource/PhaseFive/Buildings/HeavyTurret.blend",
+      "fbx": "Assets/Defend/Content/Art/PhaseFive/Models/Buildings/HeavyTurret.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/HeavyTurret.prefab"
+    },
+    {
+      "name": "AreaTurret",
+      "label": "范围炮",
+      "category": "Buildings",
+      "dimensions_width_depth_height": [
+        0.8399999737739563,
+        0.8399999737739563,
+        0.5799999833106995
+      ],
+      "triangles": 1124,
+      "renderers": 3,
+      "material_slots": 10,
+      "source": "ArtSource/PhaseFive/Buildings/AreaTurret.blend",
+      "fbx": "Assets/Defend/Content/Art/PhaseFive/Models/Buildings/AreaTurret.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/AreaTurret.prefab"
+    },
+    {
+      "name": "Core",
+      "label": "核心",
+      "category": "Buildings",
+      "dimensions_width_depth_height": [
+        0.8600000143051147,
+        0.8600000143051147,
+        0.7960000038146973
+      ],
+      "triangles": 1244,
+      "renderers": 1,
+      "material_slots": 4,
+      "source": "ArtSource/PhaseFive/Buildings/Core.blend",
+      "fbx": "Assets/Defend/Content/Art/PhaseFive/Models/Buildings/Core.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/Core.prefab"
+    },
+    {
+      "name": "StandardEnemy",
+      "label": "普通四足机械",
+      "category": "Enemies",
+      "dimensions_width_depth_height": [
+        0.7599999904632568,
+        0.7599999904632568,
+        0.48000001907348633
+      ],
+      "triangles": 600,
+      "renderers": 5,
+      "material_slots": 15,
+      "source": "ArtSource/PhaseFive/Enemies/StandardEnemy.blend",
+      "fbx": "Assets/Defend/Content/Art/PhaseFive/Models/Enemies/StandardEnemy.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/StandardEnemy.prefab"
+    },
+    {
+      "name": "FastEnemy",
+      "label": "快速滑行体",
+      "category": "Enemies",
+      "dimensions_width_depth_height": [
+        0.5,
+        0.800000011920929,
+        0.2540000081062317
+      ],
+      "triangles": 324,
+      "renderers": 1,
+      "material_slots": 4,
+      "source": "ArtSource/PhaseFive/Enemies/FastEnemy.blend",
+      "fbx": "Assets/Defend/Content/Art/PhaseFive/Models/Enemies/FastEnemy.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/FastEnemy.prefab"
+    },
+    {
+      "name": "HeavyEnemy",
+      "label": "履带重装",
+      "category": "Enemies",
+      "dimensions_width_depth_height": [
+        1.040000081062317,
+        1.1600000262260437,
+        0.4884999990463257
+      ],
+      "triangles": 624,
+      "renderers": 2,
+      "material_slots": 7,
+      "source": "ArtSource/PhaseFive/Enemies/HeavyEnemy.blend",
+      "fbx": "Assets/Defend/Content/Art/PhaseFive/Models/Enemies/HeavyEnemy.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/HeavyEnemy.prefab"
+    },
+    {
+      "name": "RockLowA",
+      "label": "低矮岩块 A",
+      "category": "Environment",
+      "dimensions_width_depth_height": [
+        0.8700000047683716,
+        0.6800000071525574,
+        0.41999998688697815
+      ],
+      "triangles": 46,
+      "renderers": 1,
+      "material_slots": 1,
+      "source": "ArtSource/PhaseFive/Environment/RockLowA.blend",
+      "fbx": "Assets/Defend/Content/Art/PhaseFive/Models/Environment/RockLowA.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/RockLowA.prefab"
+    },
+    {
+      "name": "RockLowB",
+      "label": "低矮岩块 B",
+      "category": "Environment",
+      "dimensions_width_depth_height": [
+        0.9200000166893005,
+        0.5899999737739563,
+        0.2800000011920929
+      ],
+      "triangles": 46,
+      "renderers": 1,
+      "material_slots": 1,
+      "source": "ArtSource/PhaseFive/Environment/RockLowB.blend",
+      "fbx": "Assets/Defend/Content/Art/PhaseFive/Models/Environment/RockLowB.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/RockLowB.prefab"
+    },
+    {
+      "name": "IndustrialFloor",
+      "label": "工业地面块",
+      "category": "Environment",
+      "dimensions_width_depth_height": [
+        1.0,
+        1.0,
+        0.0860000029206276
+      ],
+      "triangles": 324,
+      "renderers": 1,
+      "material_slots": 3,
+      "source": "ArtSource/PhaseFive/Environment/IndustrialFloor.blend",
+      "fbx": "Assets/Defend/Content/Art/PhaseFive/Models/Environment/IndustrialFloor.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/IndustrialFloor.prefab"
+    },
+    {
+      "name": "EntranceMarker",
+      "label": "入口警示标识",
+      "category": "Environment",
+      "dimensions_width_depth_height": [
+        0.8399999737739563,
+        0.6000000238418579,
+        0.08799999952316284
+      ],
+      "triangles": 492,
+      "renderers": 1,
+      "material_slots": 4,
+      "source": "ArtSource/PhaseFive/Environment/EntranceMarker.blend",
+      "fbx": "Assets/Defend/Content/Art/PhaseFive/Models/Environment/EntranceMarker.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/EntranceMarker.prefab"
+    }
+  ]
+}

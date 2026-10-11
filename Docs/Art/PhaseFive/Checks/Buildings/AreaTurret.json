@@ -1,0 +1,645 @@
+{
+  "asset": "AreaTurret",
+  "category": "Buildings",
+  "blender_version": "5.2.2 LTS",
+  "source": "ArtSource\\PhaseFive\\Buildings\\AreaTurret.blend",
+  "export": "Assets\\Defend\\Content\\Art\\PhaseFive\\Models\\Buildings\\AreaTurret.fbx",
+  "render_views_degrees": [
+    70,
+    36
+  ],
+  "source_before_save": {
+    "bounds_min": [
+      -0.41999998688697815,
+      -0.41999998688697815,
+      0.0
+    ],
+    "bounds_max": [
+      0.41999998688697815,
+      0.41999998688697815,
+      0.5799999833106995
+    ],
+    "dimensions": [
+      0.8399999737739563,
+      0.8399999737739563,
+      0.5799999833106995
+    ],
+    "triangles": 1124,
+    "mesh_count": 3,
+    "material_names": [
+      "PhaseFive_ArmorIvory",
+      "PhaseFive_EnergyCyan",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 10,
+    "meshes": [
+      {
+        "name": "AreaTurret_StaticStructure",
+        "triangles": 292,
+        "vertices": 160,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_ArmorIvory",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_EnergyCyan"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.1560236204905288,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "AreaTurret_Turntable",
+        "triangles": 88,
+        "vertices": 48,
+        "material_slots": 2,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.04681800046051592,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.30000001192092896
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "AreaTurret_Emitter",
+        "triangles": 744,
+        "vertices": 400,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnergyCyan",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_ArmorIvory"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.056183815757236105,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.49000000953674316
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "AreaTurret",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "AreaTurret",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "TurretYaw",
+        "parent": "AreaTurret",
+        "world_position": [
+          0.0,
+          0.0,
+          0.30000001192092896
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.30000001192092896
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "BarrelRecoil",
+        "parent": "TurretYaw",
+        "world_position": [
+          0.0,
+          0.0,
+          0.49000000953674316
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.1899999976158142
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "Muzzle",
+        "parent": "BarrelRecoil",
+        "world_position": [
+          0.0,
+          0.0,
+          0.5899999737739563
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.09999996423721313
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "source_reopened": {
+    "bounds_min": [
+      -0.41999998688697815,
+      -0.41999998688697815,
+      0.0
+    ],
+    "bounds_max": [
+      0.41999998688697815,
+      0.41999998688697815,
+      0.5799999833106995
+    ],
+    "dimensions": [
+      0.8399999737739563,
+      0.8399999737739563,
+      0.5799999833106995
+    ],
+    "triangles": 1124,
+    "mesh_count": 3,
+    "material_names": [
+      "PhaseFive_ArmorIvory",
+      "PhaseFive_EnergyCyan",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 10,
+    "meshes": [
+      {
+        "name": "AreaTurret_StaticStructure",
+        "triangles": 292,
+        "vertices": 160,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_ArmorIvory",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_EnergyCyan"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.1560236204905288,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "AreaTurret_Turntable",
+        "triangles": 88,
+        "vertices": 48,
+        "material_slots": 2,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.04681800046051592,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.30000001192092896
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "AreaTurret_Emitter",
+        "triangles": 744,
+        "vertices": 400,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnergyCyan",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_ArmorIvory"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.056183815757236105,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.49000000953674316
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "AreaTurret",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "AreaTurret",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "TurretYaw",
+        "parent": "AreaTurret",
+        "world_position": [
+          0.0,
+          0.0,
+          0.30000001192092896
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.30000001192092896
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "BarrelRecoil",
+        "parent": "TurretYaw",
+        "world_position": [
+          0.0,
+          0.0,
+          0.49000000953674316
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.1899999976158142
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "Muzzle",
+        "parent": "BarrelRecoil",
+        "world_position": [
+          0.0,
+          0.0,
+          0.5899999737739563
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.09999996423721313
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "fbx_reimported": {
+    "bounds_min": [
+      -0.41999998688697815,
+      -0.41999998688697815,
+      -6.842668653916917e-08
+    ],
+    "bounds_max": [
+      0.41999998688697815,
+      0.41999998688697815,
+      0.5800000429153442
+    ],
+    "dimensions": [
+      0.8399999737739563,
+      0.8399999737739563,
+      0.5800001113420308
+    ],
+    "triangles": 1124,
+    "mesh_count": 3,
+    "material_names": [
+      "PhaseFive_ArmorIvory",
+      "PhaseFive_EnergyCyan",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 10,
+    "meshes": [
+      {
+        "name": "AreaTurret_StaticStructure",
+        "triangles": 292,
+        "vertices": 160,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_ArmorIvory",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_EnergyCyan"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.15602362049052942,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "AreaTurret_Turntable",
+        "triangles": 88,
+        "vertices": 48,
+        "material_slots": 2,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.04681800046051595,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          4.88762061934267e-08,
+          0.30000001192092896
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "AreaTurret_Emitter",
+        "triangles": 744,
+        "vertices": 400,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnergyCyan",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_ArmorIvory"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.05618381575725735,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          7.983113903264893e-08,
+          0.49000000953674316
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "ForwardReference",
+        "parent": "AreaTurret",
+        "world_position": [
+          0.0,
+          -0.5,
+          8.146034247147327e-08
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "Muzzle",
+        "parent": "BarrelRecoil",
+        "world_position": [
+          0.0,
+          9.61232018426017e-08,
+          0.5899999737739563
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.09999996423721313
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "BarrelRecoil",
+        "parent": "TurretYaw",
+        "world_position": [
+          0.0,
+          7.983113903264893e-08,
+          0.49000000953674316
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.1899999976158142
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "TurretYaw",
+        "parent": "AreaTurret",
+        "world_position": [
+          0.0,
+          4.88762061934267e-08,
+          0.30000001192092896
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.30000001192092896
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "AreaTurret",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "source_reopened": true,
+    "export_reimported": true,
+    "save_reopen_dimensions_equal": true,
+    "export_bounds_maximum_difference": 6.842668653916917e-08,
+    "export_bounds_match": true,
+    "triangles_match": true,
+    "mesh_count_match": true,
+    "material_names_match": true,
+    "grounded": true,
+    "positive_mesh_transforms": true,
+    "valid_surface_normals": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "command": "command console",
+  "data": {
+    "command": "console",
+    "parameters": {
+      "level": "warn",
+      "since": "5667"
+    },
+    "result": {
+      "entries": [],
+      "cursor": 5667,
+      "session": "a0b3d7f1cab44ea1a0f4ed3c31198865",
+      "returned": 0,
+      "dropped": false,
+      "reset": false,
+      "counts": {
+        "error": 1913,
+        "warn": 18,
+        "log": 69
+      },
+      "groundTruth": {
+        "sampledUtc": "2026-10-10T09:44:14.0798532Z",
+        "ageMs": 262,
+        "compilationFailed": false,
+        "compiling": false,
+        "consoleErrors": 0,
+        "consoleWarnings": 0,
+        "consoleLogs": 0,
+        "seeded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\UnityProject\\Defend"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea455e01014a354794467f79e502f07, type: 3}
+  m_Name: EnergyFrontBattleSettings
+  m_EditorClassIdentifier: Defend.Unity::Defend.Unity.BattleSettingsAsset
+  turretDefinitions:
+  - kind: 2
+    range: 7
+    damage: 18
+    energyPerShot: 1200
+    cooldownTicks: 6
+    splashRadius: 0
+  - kind: 4
+    range: 9
+    damage: 130
+    energyPerShot: 8000
+    cooldownTicks: 40
+    splashRadius: 0
+  - kind: 5
+    range: 7.5
+    damage: 42
+    energyPerShot: 6000
+    cooldownTicks: 32
+    splashRadius: 2.4
+  spawnPoints:
+  - {x: 0, y: 10}
+  - {x: 0, y: 30}
+  blockedCells:
+  - {x: 11, y: 0}
+  - {x: 12, y: 0}
+  - {x: 11, y: 1}
+  - {x: 12, y: 1}
+  - {x: 11, y: 2}
+  - {x: 12, y: 2}
+  - {x: 11, y: 3}
+  - {x: 12, y: 3}
+  - {x: 11, y: 4}
+  - {x: 12, y: 4}
+  - {x: 11, y: 5}
+  - {x: 12, y: 5}
+  - {x: 11, y: 6}
+  - {x: 12, y: 6}
+  - {x: 11, y: 7}
+  - {x: 12, y: 7}
+  - {x: 11, y: 13}
+  - {x: 12, y: 13}
+  - {x: 11, y: 14}
+  - {x: 12, y: 14}
+  - {x: 11, y: 15}
+  - {x: 12, y: 15}
+  - {x: 11, y: 16}
+  - {x: 12, y: 16}
+  - {x: 11, y: 17}
+  - {x: 12, y: 17}
+  - {x: 11, y: 18}
+  - {x: 12, y: 18}
+  - {x: 11, y: 19}
+  - {x: 12, y: 19}
+  - {x: 11, y: 20}
+  - {x: 12, y: 20}
+  - {x: 11, y: 21}
+  - {x: 12, y: 21}
+  - {x: 11, y: 22}
+  - {x: 12, y: 22}
+  - {x: 11, y: 23}
+  - {x: 12, y: 23}
+  - {x: 11, y: 24}
+  - {x: 12, y: 24}
+  - {x: 11, y: 25}
+  - {x: 12, y: 25}
+  - {x: 11, y: 26}
+  - {x: 12, y: 26}
+  - {x: 11, y: 27}
+  - {x: 12, y: 27}
+  - {x: 11, y: 33}
+  - {x: 12, y: 33}
+  - {x: 11, y: 34}
+  - {x: 12, y: 34}
+  - {x: 11, y: 35}
+  - {x: 12, y: 35}
+  - {x: 11, y: 36}
+  - {x: 12, y: 36}
+  - {x: 11, y: 37}
+  - {x: 12, y: 37}
+  - {x: 11, y: 38}
+  - {x: 12, y: 38}
+  - {x: 11, y: 39}
+  - {x: 12, y: 39}
+  - {x: 24, y: 11}
+  - {x: 24, y: 12}
+  - {x: 24, y: 13}
+  - {x: 24, y: 14}
+  - {x: 24, y: 26}
+  - {x: 24, y: 27}
+  - {x: 24, y: 28}
+  - {x: 24, y: 29}
+  maximumBuildings: 100
+  maximumLivingEnemies: 200
+  enemySpeedCellsPerSecond: 1.2
+  enemyAttackDamage: 10
+  enemyAttackIntervalTicks: 20
+  enableEnemyBehavior: 1
+  enemySensingRadius: 8
+  enemyObservationMemorySeconds: 3
+  enemyEvaluationIntervalSeconds: 0.5
+  enemyMinimumTargetLockSeconds: 3
+  enemySwitchScoreRatio: 1.35
+  enemyMaximumCandidates: 6
+  enemyMaximumEvaluationsPerTick: 20
+  enemyMaximumPathBuildsPerTick: 2
+  enemyMaximumAdditionalTravelCells: 6
+  turretRange: 7
+  turretDamage: 20
+  turretEnergyPerShot: 2000
+  turretCooldownTicks: 8
+  shotDisplayTicks: 6
+  waves:
+  - enemyCount: 24
+    enemyHealth: 80
+    spawnIntervalTicks: 50
+    clearReward: 240
+    enemyPattern: 00000000i
+    entranceIndex: 0
+    briefing: "\u5357\u4FA7\u8BD5\u63A2\uFF1A\u5148\u7ED9\u8FDE\u5C04\u70AE\u5145\u80FD\u3002"
+  - enemyCount: 32
+    enemyHealth: 95
+    spawnIntervalTicks: 44
+    clearReward: 280
+    enemyPattern: 000000000100000001000000i
+    entranceIndex: 1
+    briefing: "\u5317\u4FA7\u5FEB\u88AD\uFF1A\u8865\u8DB3\u5317\u4FA7\u6301\u7EED\u706B\u529B\u3002"
+  - enemyCount: 36
+    enemyHealth: 105
+    spawnIntervalTicks: 40
+    clearReward: 320
+    enemyPattern: 020000000000000000000000i
+    entranceIndex: 0
+    briefing: "\u5357\u4FA7\u6709\u91CD\u88C5\u6765\u88AD\uFF0C\u4F1A\u653B\u51FB\u9644\u8FD1\u66B4\u9732\u7684\u4F9B\u7535\u8BBE\u65BD\u3002\u4FDD\u62A4\u4E2D\u7EE7\u7684\u63A5\u8FD1\u8DEF\u7EBF\u3002"
+  - enemyCount: 42
+    enemyHealth: 115
+    spawnIntervalTicks: 36
+    clearReward: 360
+    enemyPattern: 000000000000000001000000i
+    entranceIndex: 1
+    briefing: "\u5317\u4FA7\u96C6\u7FA4\uFF1A\u8303\u56F4\u70AE\u9002\u5408\u5BC6\u96C6\u901A\u9053\u3002"
+  - enemyCount: 48
+    enemyHealth: 125
+    spawnIntervalTicks: 32
+    clearReward: 400
+    enemyPattern: 010000000200000000000000i
+    entranceIndex: -1
+    briefing: "\u5357\u5317\u4E24\u4FA7\u6709\u91CD\u88C5\u6765\u88AD\uFF0C\u4F1A\u653B\u51FB\u9644\u8FD1\u66B4\u9732\u7684\u4F9B\u7535\u8BBE\u65BD\u3002\u5907\u7528\u4F9B\u7535\u5E94\u907F\u5F00\u540C\u4E00\u8584\u5F31\u8282\u70B9\u3002"
+  - enemyCount: 56
+    enemyHealth: 135
+    spawnIntervalTicks: 28
+    clearReward: 440
+    enemyPattern: 000000000000000002000000i
+    entranceIndex: -1
+    briefing: "\u5357\u5317\u4E24\u4FA7\u6709\u91CD\u88C5\u6765\u88AD\uFF0C\u4F1A\u653B\u51FB\u9644\u8FD1\u66B4\u9732\u7684\u4F9B\u7535\u8BBE\u65BD\u3002\u4FDD\u62A4\u4E2D\u7EE7\u7684\u63A5\u8FD1\u8DEF\u7EBF\u3002"
+  - enemyCount: 64
+    enemyHealth: 150
+    spawnIntervalTicks: 24
+    clearReward: 480
+    enemyPattern: 010000000100000002000000i
+    entranceIndex: -1
+    briefing: "\u5357\u5317\u4E24\u4FA7\u6709\u91CD\u88C5\u6765\u88AD\uFF0C\u4F1A\u653B\u51FB\u9644\u8FD1\u66B4\u9732\u7684\u4F9B\u7535\u8BBE\u65BD\u3002\u4FDD\u7559\u7EF4\u4FEE\u8D44\u91D1\uFF0C\u5173\u6CE8\u5B9E\u9645\u5230\u8D27\u3002"
+  - enemyCount: 72
+    enemyHealth: 165
+    spawnIntervalTicks: 22
+    clearReward: 600
+    enemyPattern: 02000000000000000100000000000000i
+    entranceIndex: -1
+    briefing: "\u5357\u4FA7\u6709\u91CD\u88C5\u6765\u88AD\uFF0C\u4F1A\u653B\u51FB\u9644\u8FD1\u66B4\u9732\u7684\u4F9B\u7535\u8BBE\u65BD\u3002\u5907\u7528\u4F9B\u7535\u5E94\u907F\u5F00\u540C\u4E00\u8584\u5F31\u8282\u70B9\u3002"

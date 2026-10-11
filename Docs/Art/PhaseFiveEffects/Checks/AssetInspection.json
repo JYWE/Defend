@@ -1,0 +1,281 @@
+{
+  "passed": true,
+  "entries": [
+    {
+      "id": "AreaDischarge",
+      "lifetime": 0.18,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 6,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "AreaImpact",
+      "lifetime": 0.35,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 10,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "BuildingDestruction",
+      "lifetime": 0.5,
+      "loop": false,
+      "group": "Debris",
+      "cost": 8,
+      "particles": 11,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "BuildingHit",
+      "lifetime": 0.08,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 6,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "EnemyDeath",
+      "lifetime": 0.6,
+      "loop": false,
+      "group": "Debris",
+      "cost": 8,
+      "particles": 9,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "EnemyHit",
+      "lifetime": 0.08,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 5,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "EnergyArrival",
+      "lifetime": 0.18,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 0,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "EnergyDisconnected",
+      "lifetime": 1.4,
+      "loop": true,
+      "group": "Status",
+      "cost": 1,
+      "particles": 0,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "EnergyShortage",
+      "lifetime": 1.2,
+      "loop": true,
+      "group": "Status",
+      "cost": 1,
+      "particles": 0,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "EnergyTransfer",
+      "lifetime": 0.45,
+      "loop": false,
+      "group": "EnergyPulse",
+      "cost": 1,
+      "particles": 0,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "HeavyContact",
+      "lifetime": 0.25,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 10,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "HeavyImpact",
+      "lifetime": 0.28,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 9,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "HeavyLock",
+      "lifetime": 1.0,
+      "loop": true,
+      "group": "Status",
+      "cost": 1,
+      "particles": 0,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "HeavyMuzzle",
+      "lifetime": 0.32,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 7,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "HeavyTracer",
+      "lifetime": 0.09,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 0,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "PortSend",
+      "lifetime": 0.12,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 0,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "RapidImpact",
+      "lifetime": 0.14,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 5,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "RapidMuzzle",
+      "lifetime": 0.12,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 4,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "RapidTracer",
+      "lifetime": 0.06,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 0,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "ReactorRunning",
+      "lifetime": 1.05,
+      "loop": true,
+      "group": "Status",
+      "cost": 1,
+      "particles": 0,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "RelayRunning",
+      "lifetime": 1.5,
+      "loop": true,
+      "group": "Status",
+      "cost": 1,
+      "particles": 0,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "RepairComplete",
+      "lifetime": 0.22,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 3,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "SearchMarker",
+      "lifetime": 1.6,
+      "loop": true,
+      "group": "Status",
+      "cost": 1,
+      "particles": 0,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "ShieldBreak",
+      "lifetime": 0.5,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 8,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    },
+    {
+      "id": "ShieldHit",
+      "lifetime": 0.22,
+      "loop": false,
+      "group": "ShortEffect",
+      "cost": 1,
+      "particles": 4,
+      "playOnAwake": false,
+      "missingMaterials": false,
+      "missingScripts": 0
+    }
+  ],
+  "scene": "Assets/Defend/Content/Art/PhaseFiveEffects/Scenes/PhaseFiveEffectsShowcase.unity"
+}

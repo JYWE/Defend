@@ -1,0 +1,211 @@
+{
+  "method": "Saved Blender source reopened; direct dimensions and temporary in-memory pivot transforms; no source modification",
+  "assets": [
+    {
+      "asset": "Reactor",
+      "root_bottom_center": true,
+      "root_unit_scale": true,
+      "static_bounds": [
+        [
+          -0.41999998688697815,
+          0.41999998688697815
+        ],
+        [
+          -0.41999998688697815,
+          0.41999998688697815
+        ],
+        [
+          0.0,
+          1.1100000143051147
+        ]
+      ],
+      "static_footprint_within_088_meters": true,
+      "forward_reference_world": [
+        0.0,
+        -0.5,
+        0.0
+      ],
+      "forward_reference_correct": true,
+      "source_mesh_count": 1
+    },
+    {
+      "asset": "Relay",
+      "root_bottom_center": true,
+      "root_unit_scale": true,
+      "static_bounds": [
+        [
+          -0.36000001430511475,
+          0.36000001430511475
+        ],
+        [
+          -0.36000001430511475,
+          0.36000001430511475
+        ],
+        [
+          0.0,
+          1.1649999618530273
+        ]
+      ],
+      "static_footprint_within_088_meters": true,
+      "forward_reference_world": [
+        0.0,
+        -0.5,
+        0.0
+      ],
+      "forward_reference_correct": true,
+      "source_mesh_count": 1
+    },
+    {
+      "asset": "RapidTurret",
+      "root_bottom_center": true,
+      "root_unit_scale": true,
+      "static_bounds": [
+        [
+          -0.41999998688697815,
+          0.41999998688697815
+        ],
+        [
+          -0.41999998688697815,
+          0.41999998688697815
+        ],
+        [
+          0.0,
+          0.2800000011920929
+        ]
+      ],
+      "static_footprint_within_088_meters": true,
+      "forward_reference_world": [
+        0.0,
+        -0.5,
+        0.0
+      ],
+      "forward_reference_correct": true,
+      "source_mesh_count": 3,
+      "full_rotation_maximum_horizontal_radius_meters": 0.5276800700813019,
+      "moving_assembly_attached_to_yaw": true,
+      "muzzle_count": 2,
+      "quarter_turn_muzzle_error_meters": 2.2351741790771484e-08,
+      "quarter_turn_follows_yaw": true,
+      "recoil_test_muzzle_offsets_meters": [
+        [
+          0.0,
+          0.03999999165534973,
+          0.0
+        ],
+        [
+          0.0,
+          0.03999999165534973,
+          0.0
+        ]
+      ],
+      "recoil_moves_muzzle_four_centimeters_backward": true
+    },
+    {
+      "asset": "HeavyTurret",
+      "root_bottom_center": true,
+      "root_unit_scale": true,
+      "static_bounds": [
+        [
+          -0.4399999976158142,
+          0.4399999976158142
+        ],
+        [
+          -0.4399999976158142,
+          0.4399999976158142
+        ],
+        [
+          0.0,
+          0.2800000011920929
+        ]
+      ],
+      "static_footprint_within_088_meters": true,
+      "forward_reference_world": [
+        0.0,
+        -0.5,
+        0.0
+      ],
+      "forward_reference_correct": true,
+      "source_mesh_count": 3,
+      "full_rotation_maximum_horizontal_radius_meters": 0.5301179642686049,
+      "moving_assembly_attached_to_yaw": true,
+      "muzzle_count": 1,
+      "quarter_turn_muzzle_error_meters": 2.2773633427341507e-08,
+      "quarter_turn_follows_yaw": true,
+      "recoil_test_muzzle_offsets_meters": [
+        [
+          0.0,
+          0.04000002145767212,
+          0.0
+        ]
+      ],
+      "recoil_moves_muzzle_four_centimeters_backward": true
+    },
+    {
+      "asset": "AreaTurret",
+      "root_bottom_center": true,
+      "root_unit_scale": true,
+      "static_bounds": [
+        [
+          -0.41999998688697815,
+          0.41999998688697815
+        ],
+        [
+          -0.41999998688697815,
+          0.41999998688697815
+        ],
+        [
+          0.0,
+          0.2800000011920929
+        ]
+      ],
+      "static_footprint_within_088_meters": true,
+      "forward_reference_world": [
+        0.0,
+        -0.5,
+        0.0
+      ],
+      "forward_reference_correct": true,
+      "source_mesh_count": 3,
+      "full_rotation_maximum_horizontal_radius_meters": 0.40500001210196573,
+      "moving_assembly_attached_to_yaw": true,
+      "muzzle_count": 1,
+      "quarter_turn_muzzle_error_meters": 0.0,
+      "quarter_turn_follows_yaw": true,
+      "recoil_test_muzzle_offsets_meters": [
+        [
+          0.0,
+          0.03999999910593033,
+          0.0
+        ]
+      ],
+      "recoil_moves_muzzle_four_centimeters_backward": true
+    },
+    {
+      "asset": "Core",
+      "root_bottom_center": true,
+      "root_unit_scale": true,
+      "static_bounds": [
+        [
+          -0.4300000071525574,
+          0.4300000071525574
+        ],
+        [
+          -0.4300000071525574,
+          0.4300000071525574
+        ],
+        [
+          0.0,
+          0.7960000038146973
+        ]
+      ],
+      "static_footprint_within_088_meters": true,
+      "forward_reference_world": [
+        0.0,
+        -0.5,
+        0.0
+      ],
+      "forward_reference_correct": true,
+      "source_mesh_count": 1
+    }
+  ]
+}

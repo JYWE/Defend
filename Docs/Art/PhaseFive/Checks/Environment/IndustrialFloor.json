@@ -1,0 +1,306 @@
+{
+  "asset": "IndustrialFloor",
+  "category": "Environment",
+  "blender_version": "5.2.2 LTS",
+  "source": "ArtSource\\PhaseFive\\Environment\\IndustrialFloor.blend",
+  "export": "Assets\\Defend\\Content\\Art\\PhaseFive\\Models\\Environment\\IndustrialFloor.fbx",
+  "render_views_degrees": [
+    70,
+    36
+  ],
+  "source_before_save": {
+    "bounds_min": [
+      -0.5,
+      -0.5,
+      0.0
+    ],
+    "bounds_max": [
+      0.5,
+      0.5,
+      0.0860000029206276
+    ],
+    "dimensions": [
+      1.0,
+      1.0,
+      0.0860000029206276
+    ],
+    "triangles": 324,
+    "mesh_count": 1,
+    "material_names": [
+      "PhaseFive_GroundConcrete",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 3,
+    "meshes": [
+      {
+        "name": "IndustrialFloor_Static",
+        "triangles": 324,
+        "vertices": 184,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_GroundConcrete",
+          "PhaseFive_MetalSteel"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.07782477954925833,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "IndustrialFloor",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "IndustrialFloor",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "source_reopened": {
+    "bounds_min": [
+      -0.5,
+      -0.5,
+      0.0
+    ],
+    "bounds_max": [
+      0.5,
+      0.5,
+      0.0860000029206276
+    ],
+    "dimensions": [
+      1.0,
+      1.0,
+      0.0860000029206276
+    ],
+    "triangles": 324,
+    "mesh_count": 1,
+    "material_names": [
+      "PhaseFive_GroundConcrete",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 3,
+    "meshes": [
+      {
+        "name": "IndustrialFloor_Static",
+        "triangles": 324,
+        "vertices": 184,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_GroundConcrete",
+          "PhaseFive_MetalSteel"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.07782477954925833,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "IndustrialFloor",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "IndustrialFloor",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "fbx_reimported": {
+    "bounds_min": [
+      -0.5,
+      -0.5,
+      -8.097158143982597e-08
+    ],
+    "bounds_max": [
+      0.5,
+      0.5,
+      0.08599995076656342
+    ],
+    "dimensions": [
+      1.0,
+      1.0,
+      0.08600003173814486
+    ],
+    "triangles": 324,
+    "mesh_count": 1,
+    "material_names": [
+      "PhaseFive_GroundConcrete",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 3,
+    "meshes": [
+      {
+        "name": "IndustrialFloor_Static",
+        "triangles": 324,
+        "vertices": 184,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_GroundConcrete",
+          "PhaseFive_MetalSteel"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.07782477954925825,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "ForwardReference",
+        "parent": "IndustrialFloor",
+        "world_position": [
+          0.0,
+          -0.5,
+          8.146034247147327e-08
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "IndustrialFloor",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "source_reopened": true,
+    "export_reimported": true,
+    "save_reopen_dimensions_equal": true,
+    "export_bounds_maximum_difference": 8.097158143982597e-08,
+    "export_bounds_match": true,
+    "triangles_match": true,
+    "mesh_count_match": true,
+    "material_names_match": true,
+    "grounded": true,
+    "positive_mesh_transforms": true,
+    "valid_surface_normals": true
+  }
+}

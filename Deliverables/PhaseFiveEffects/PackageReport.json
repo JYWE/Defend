@@ -1,0 +1,8 @@
+{
+  "file": "Deliverables\\PhaseFiveEffects\\PhaseFiveIndustrialEffects.zip",
+  "files": 187,
+  "bytes": 9965442,
+  "archive_and_source_equal": true,
+  "verification": "direct byte comparison, no hashes",
+  "requires_previous_delivery": "PhaseFiveIndustrialModels.zip (existing model Prefabs, meshes, materials and font)"
+}

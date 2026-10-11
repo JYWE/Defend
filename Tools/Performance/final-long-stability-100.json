@@ -1,0 +1,153 @@
+{
+  "count": 100,
+  "warmup": 200,
+  "steps": 36000,
+  "setupMilliseconds": 84.1644,
+  "p50": 3.48,
+  "p95": 10.2317,
+  "p99": 22.5683,
+  "maximum": 47.7215,
+  "allocatedBytes": 43340700160,
+  "bytesPerStep": 1203908,
+  "connections": 4072,
+  "peakBatches": 2131,
+  "peakPending": 2073,
+  "pending": 0,
+  "completedSearches": 2416819,
+  "startedSearches": 2644628,
+  "consumed": 899808740,
+  "demand": 900000000,
+  "receivedAtAllNodes": 1611606164,
+  "consumersWithDelivery": 25,
+  "balanceError": 0,
+  "runtime": ".NET 9.0.12",
+  "windows": [
+    {
+      "endStep": 2000,
+      "consumed": 49848880,
+      "batches": 1553,
+      "pending": 12,
+      "retainedManagedBytes": 16277664
+    },
+    {
+      "endStep": 4000,
+      "consumed": 49992441,
+      "batches": 1260,
+      "pending": 362,
+      "retainedManagedBytes": 25853992
+    },
+    {
+      "endStep": 6000,
+      "consumed": 49972308,
+      "batches": 1625,
+      "pending": 0,
+      "retainedManagedBytes": 19363560
+    },
+    {
+      "endStep": 8000,
+      "consumed": 50000000,
+      "batches": 1552,
+      "pending": 0,
+      "retainedManagedBytes": 14620704
+    },
+    {
+      "endStep": 10000,
+      "consumed": 50000000,
+      "batches": 1535,
+      "pending": 29,
+      "retainedManagedBytes": 16287768
+    },
+    {
+      "endStep": 12000,
+      "consumed": 50000000,
+      "batches": 1585,
+      "pending": 64,
+      "retainedManagedBytes": 13464384
+    },
+    {
+      "endStep": 14000,
+      "consumed": 49995111,
+      "batches": 1548,
+      "pending": 0,
+      "retainedManagedBytes": 15123512
+    },
+    {
+      "endStep": 16000,
+      "consumed": 50000000,
+      "batches": 1453,
+      "pending": 59,
+      "retainedManagedBytes": 15231536
+    },
+    {
+      "endStep": 18000,
+      "consumed": 50000000,
+      "batches": 1653,
+      "pending": 217,
+      "retainedManagedBytes": 12799000
+    },
+    {
+      "endStep": 20000,
+      "consumed": 50000000,
+      "batches": 1696,
+      "pending": 98,
+      "retainedManagedBytes": 18544944
+    },
+    {
+      "endStep": 22000,
+      "consumed": 50000000,
+      "batches": 1540,
+      "pending": 48,
+      "retainedManagedBytes": 15006336
+    },
+    {
+      "endStep": 24000,
+      "consumed": 50000000,
+      "batches": 1638,
+      "pending": 102,
+      "retainedManagedBytes": 12490488
+    },
+    {
+      "endStep": 26000,
+      "consumed": 50000000,
+      "batches": 1621,
+      "pending": 0,
+      "retainedManagedBytes": 11912464
+    },
+    {
+      "endStep": 28000,
+      "consumed": 50000000,
+      "batches": 1664,
+      "pending": 124,
+      "retainedManagedBytes": 13232248
+    },
+    {
+      "endStep": 30000,
+      "consumed": 50000000,
+      "batches": 1683,
+      "pending": 20,
+      "retainedManagedBytes": 19834184
+    },
+    {
+      "endStep": 32000,
+      "consumed": 50000000,
+      "batches": 1429,
+      "pending": 57,
+      "retainedManagedBytes": 15789248
+    },
+    {
+      "endStep": 34000,
+      "consumed": 50000000,
+      "batches": 1444,
+      "pending": 39,
+      "retainedManagedBytes": 17148024
+    },
+    {
+      "endStep": 36000,
+      "consumed": 50000000,
+      "batches": 1443,
+      "pending": 0,
+      "retainedManagedBytes": 22911384
+    }
+  ],
+  "boundary": "\u7EAF C# \u8FDB\u7A0B\uFF0C\u672A\u5305\u542B Unity \u8868\u73B0\u3001\u654C\u4EBA\u548C\u6218\u6597\uFF1B\u4E0D\u4EE3\u8868 Player \u5E27\u7387"
+}

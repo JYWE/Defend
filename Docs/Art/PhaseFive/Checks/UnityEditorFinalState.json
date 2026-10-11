@@ -1,0 +1,39 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Tools/Art/PhaseFive/PhaseFiveAssetInspection.cs",
+      "entry": "PhaseFiveAssetInspection.Baseline"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 239,
+      "executeMs": 7,
+      "assemblyName": "PipelineRunScript_PhaseFiveAssetInspection_bfb774811abc447d8c716ea0c44f7b33",
+      "success": true,
+      "result": {
+        "playing": false,
+        "compiling": false,
+        "activeScene": "Assets/Defend/Content/Scenes/Dev/EnergyFrontDefense.unity",
+        "scenes": [
+          {
+            "path": "Assets/Defend/Content/Scenes/Dev/EnergyFrontDefense.unity",
+            "isDirty": false,
+            "isLoaded": true,
+            "roots": 12
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "E:\\UnityProject\\Defend"
+    },
+    "success": true
+  },
+  "errors": [],
+  "warnings": []
+}

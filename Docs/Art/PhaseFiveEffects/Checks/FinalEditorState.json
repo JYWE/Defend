@@ -1,0 +1,12 @@
+{
+  "unity": "6000.6.5f1",
+  "processor": "Intel(R) Core(TM) i9-14900HX",
+  "graphics": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "graphicsApi": "Direct3D11",
+  "playing": false,
+  "compiling": false,
+  "background": false,
+  "activeScene": "Assets/Defend/Content/Scenes/Dev/EnergyFrontDefense.unity",
+  "shaderHasErrors": false,
+  "runtimeEffectsRemaining": 0
+}

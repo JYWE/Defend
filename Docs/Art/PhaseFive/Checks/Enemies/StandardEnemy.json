@@ -1,0 +1,896 @@
+{
+  "asset": "StandardEnemy",
+  "category": "Enemies",
+  "blender_version": "5.2.2 LTS",
+  "source": "ArtSource\\PhaseFive\\Enemies\\StandardEnemy.blend",
+  "export": "Assets\\Defend\\Content\\Art\\PhaseFive\\Models\\Enemies\\StandardEnemy.fbx",
+  "render_views_degrees": [
+    70,
+    36
+  ],
+  "source_before_save": {
+    "bounds_min": [
+      -0.3799999952316284,
+      -0.3799999952316284,
+      0.0
+    ],
+    "bounds_max": [
+      0.3799999952316284,
+      0.3799999952316284,
+      0.48000001907348633
+    ],
+    "dimensions": [
+      0.7599999904632568,
+      0.7599999904632568,
+      0.48000001907348633
+    ],
+    "triangles": 600,
+    "mesh_count": 5,
+    "material_names": [
+      "PhaseFive_EnemyOrange",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 15,
+    "meshes": [
+      {
+        "name": "LegFrontLeft",
+        "triangles": 108,
+        "vertices": 64,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.004181009211250053,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          -0.17499999701976776,
+          -0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegFrontRight",
+        "triangles": 108,
+        "vertices": 64,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.004181009223847659,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.17499999701976776,
+          -0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegRearLeft",
+        "triangles": 108,
+        "vertices": 64,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.004181008974446704,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          -0.17499999701976776,
+          0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegRearRight",
+        "triangles": 108,
+        "vertices": 64,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.004181008998768415,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.17499999701976776,
+          0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "StandardEnemyBody",
+        "triangles": 168,
+        "vertices": 96,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.04388494205611505,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "StandardEnemy",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "StandardEnemy",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegFrontLeftPivot",
+        "parent": "StandardEnemy",
+        "world_position": [
+          -0.17499999701976776,
+          -0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_position": [
+          -0.17499999701976776,
+          -0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegFrontRightPivot",
+        "parent": "StandardEnemy",
+        "world_position": [
+          0.17499999701976776,
+          -0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_position": [
+          0.17499999701976776,
+          -0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegRearLeftPivot",
+        "parent": "StandardEnemy",
+        "world_position": [
+          -0.17499999701976776,
+          0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_position": [
+          -0.17499999701976776,
+          0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegRearRightPivot",
+        "parent": "StandardEnemy",
+        "world_position": [
+          0.17499999701976776,
+          0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_position": [
+          0.17499999701976776,
+          0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "source_reopened": {
+    "bounds_min": [
+      -0.3799999952316284,
+      -0.3799999952316284,
+      0.0
+    ],
+    "bounds_max": [
+      0.3799999952316284,
+      0.3799999952316284,
+      0.48000001907348633
+    ],
+    "dimensions": [
+      0.7599999904632568,
+      0.7599999904632568,
+      0.48000001907348633
+    ],
+    "triangles": 600,
+    "mesh_count": 5,
+    "material_names": [
+      "PhaseFive_EnemyOrange",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 15,
+    "meshes": [
+      {
+        "name": "LegFrontLeft",
+        "triangles": 108,
+        "vertices": 64,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.004181009211250053,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          -0.17499999701976776,
+          -0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegFrontRight",
+        "triangles": 108,
+        "vertices": 64,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.004181009223847659,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.17499999701976776,
+          -0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegRearLeft",
+        "triangles": 108,
+        "vertices": 64,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.004181008974446704,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          -0.17499999701976776,
+          0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegRearRight",
+        "triangles": 108,
+        "vertices": 64,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.004181008998768415,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.17499999701976776,
+          0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "StandardEnemyBody",
+        "triangles": 168,
+        "vertices": 96,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.04388494205611505,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "StandardEnemy",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "StandardEnemy",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegFrontLeftPivot",
+        "parent": "StandardEnemy",
+        "world_position": [
+          -0.17499999701976776,
+          -0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_position": [
+          -0.17499999701976776,
+          -0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegFrontRightPivot",
+        "parent": "StandardEnemy",
+        "world_position": [
+          0.17499999701976776,
+          -0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_position": [
+          0.17499999701976776,
+          -0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegRearLeftPivot",
+        "parent": "StandardEnemy",
+        "world_position": [
+          -0.17499999701976776,
+          0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_position": [
+          -0.17499999701976776,
+          0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegRearRightPivot",
+        "parent": "StandardEnemy",
+        "world_position": [
+          0.17499999701976776,
+          0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_position": [
+          0.17499999701976776,
+          0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "fbx_reimported": {
+    "bounds_min": [
+      -0.3799999952316284,
+      -0.3799999952316284,
+      -6.808868135976809e-08
+    ],
+    "bounds_max": [
+      0.3799999952316284,
+      0.3799999952316284,
+      0.4800000488758087
+    ],
+    "dimensions": [
+      0.7599999904632568,
+      0.7599999904632568,
+      0.4800001169644901
+    ],
+    "triangles": 600,
+    "mesh_count": 5,
+    "material_names": [
+      "PhaseFive_EnemyOrange",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 15,
+    "meshes": [
+      {
+        "name": "LegFrontLeft",
+        "triangles": 108,
+        "vertices": 64,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.004181009197320012,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          -0.17499999701976776,
+          -0.14499995112419128,
+          0.30500003695487976
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegFrontRight",
+        "triangles": 108,
+        "vertices": 64,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.004181009275107562,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.17499999701976776,
+          -0.14499995112419128,
+          0.30500003695487976
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegRearLeft",
+        "triangles": 108,
+        "vertices": 64,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.004181008975977209,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          -0.17499999701976776,
+          0.14500004053115845,
+          0.304999977350235
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegRearRight",
+        "triangles": 108,
+        "vertices": 64,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.0041810089721975655,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.17499999701976776,
+          0.14500004053115845,
+          0.304999977350235
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "StandardEnemyBody",
+        "triangles": 168,
+        "vertices": 96,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.043884942056115095,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "ForwardReference",
+        "parent": "StandardEnemy",
+        "world_position": [
+          0.0,
+          -0.5,
+          8.146034247147327e-08
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegFrontLeftPivot",
+        "parent": "StandardEnemy",
+        "world_position": [
+          -0.17499999701976776,
+          -0.14499995112419128,
+          0.30500003695487976
+        ],
+        "local_position": [
+          -0.17499999701976776,
+          -0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegFrontRightPivot",
+        "parent": "StandardEnemy",
+        "world_position": [
+          0.17499999701976776,
+          -0.14499995112419128,
+          0.30500003695487976
+        ],
+        "local_position": [
+          0.17499999701976776,
+          -0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegRearLeftPivot",
+        "parent": "StandardEnemy",
+        "world_position": [
+          -0.17499999701976776,
+          0.14500004053115845,
+          0.304999977350235
+        ],
+        "local_position": [
+          -0.17499999701976776,
+          0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "LegRearRightPivot",
+        "parent": "StandardEnemy",
+        "world_position": [
+          0.17499999701976776,
+          0.14500004053115845,
+          0.304999977350235
+        ],
+        "local_position": [
+          0.17499999701976776,
+          0.14499999582767487,
+          0.3050000071525574
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "StandardEnemy",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "source_reopened": true,
+    "export_reimported": true,
+    "save_reopen_dimensions_equal": true,
+    "export_bounds_maximum_difference": 6.808868135976809e-08,
+    "export_bounds_match": true,
+    "triangles_match": true,
+    "mesh_count_match": true,
+    "material_names_match": true,
+    "grounded": true,
+    "positive_mesh_transforms": true,
+    "valid_surface_normals": true
+  },
+  "motion_checks": [
+    {
+      "pivot": "LegFrontLeftPivot",
+      "mesh": "LegFrontLeft",
+      "sample_vertex_displacement_metres": 0.014006812843634748,
+      "moving_part_responds": true,
+      "neutral_pose_restored": true,
+      "mesh_origin_matches_pivot": true,
+      "stationary_body_unchanged": true
+    },
+    {
+      "pivot": "LegFrontRightPivot",
+      "mesh": "LegFrontRight",
+      "sample_vertex_displacement_metres": 0.014006812843634748,
+      "moving_part_responds": true,
+      "neutral_pose_restored": true,
+      "mesh_origin_matches_pivot": true,
+      "stationary_body_unchanged": true
+    },
+    {
+      "pivot": "LegRearLeftPivot",
+      "mesh": "LegRearLeft",
+      "sample_vertex_displacement_metres": 0.014006813622822436,
+      "moving_part_responds": true,
+      "neutral_pose_restored": true,
+      "mesh_origin_matches_pivot": true,
+      "stationary_body_unchanged": true
+    },
+    {
+      "pivot": "LegRearRightPivot",
+      "mesh": "LegRearRight",
+      "sample_vertex_displacement_metres": 0.014006813622822436,
+      "moving_part_responds": true,
+      "neutral_pose_restored": true,
+      "mesh_origin_matches_pivot": true,
+      "stationary_body_unchanged": true
+    }
+  ]
+}

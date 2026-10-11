@@ -1,0 +1,312 @@
+{
+  "asset": "EntranceMarker",
+  "category": "Environment",
+  "blender_version": "5.2.2 LTS",
+  "source": "ArtSource\\PhaseFive\\Environment\\EntranceMarker.blend",
+  "export": "Assets\\Defend\\Content\\Art\\PhaseFive\\Models\\Environment\\EntranceMarker.fbx",
+  "render_views_degrees": [
+    70,
+    36
+  ],
+  "source_before_save": {
+    "bounds_min": [
+      -0.41999998688697815,
+      -0.30000001192092896,
+      0.0
+    ],
+    "bounds_max": [
+      0.41999998688697815,
+      0.30000001192092896,
+      0.08799999952316284
+    ],
+    "dimensions": [
+      0.8399999737739563,
+      0.6000000238418579,
+      0.08799999952316284
+    ],
+    "triangles": 492,
+    "mesh_count": 1,
+    "material_names": [
+      "PhaseFive_ArmorIvory",
+      "PhaseFive_EnemyOrange",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 4,
+    "meshes": [
+      {
+        "name": "EntranceMarker_Static",
+        "triangles": 492,
+        "vertices": 270,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_ArmorIvory",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.03548848526426436,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "EntranceMarker",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "EntranceMarker",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "source_reopened": {
+    "bounds_min": [
+      -0.41999998688697815,
+      -0.30000001192092896,
+      0.0
+    ],
+    "bounds_max": [
+      0.41999998688697815,
+      0.30000001192092896,
+      0.08799999952316284
+    ],
+    "dimensions": [
+      0.8399999737739563,
+      0.6000000238418579,
+      0.08799999952316284
+    ],
+    "triangles": 492,
+    "mesh_count": 1,
+    "material_names": [
+      "PhaseFive_ArmorIvory",
+      "PhaseFive_EnemyOrange",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 4,
+    "meshes": [
+      {
+        "name": "EntranceMarker_Static",
+        "triangles": 492,
+        "vertices": 270,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_ArmorIvory",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.03548848526426436,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "EntranceMarker",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "EntranceMarker",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "fbx_reimported": {
+    "bounds_min": [
+      -0.41999998688697815,
+      -0.30000001192092896,
+      -4.88762061934267e-08
+    ],
+    "bounds_max": [
+      0.41999998688697815,
+      0.30000001192092896,
+      0.08800002187490463
+    ],
+    "dimensions": [
+      0.8399999737739563,
+      0.6000000238418579,
+      0.08800007075111083
+    ],
+    "triangles": 492,
+    "mesh_count": 1,
+    "material_names": [
+      "PhaseFive_ArmorIvory",
+      "PhaseFive_EnemyOrange",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 4,
+    "meshes": [
+      {
+        "name": "EntranceMarker_Static",
+        "triangles": 492,
+        "vertices": 270,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_ArmorIvory",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.03548848526426443,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "ForwardReference",
+        "parent": "EntranceMarker",
+        "world_position": [
+          0.0,
+          -0.5,
+          8.146034247147327e-08
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "EntranceMarker",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "source_reopened": true,
+    "export_reimported": true,
+    "save_reopen_dimensions_equal": true,
+    "export_bounds_maximum_difference": 4.88762061934267e-08,
+    "export_bounds_match": true,
+    "triangles_match": true,
+    "mesh_count_match": true,
+    "material_names_match": true,
+    "grounded": true,
+    "positive_mesh_transforms": true,
+    "valid_surface_normals": true
+  }
+}

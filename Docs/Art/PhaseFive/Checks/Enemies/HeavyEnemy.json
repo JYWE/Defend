@@ -1,0 +1,461 @@
+{
+  "asset": "HeavyEnemy",
+  "category": "Enemies",
+  "blender_version": "5.2.2 LTS",
+  "source": "ArtSource\\PhaseFive\\Enemies\\HeavyEnemy.blend",
+  "export": "Assets\\Defend\\Content\\Art\\PhaseFive\\Models\\Enemies\\HeavyEnemy.fbx",
+  "render_views_degrees": [
+    70,
+    36
+  ],
+  "source_before_save": {
+    "bounds_min": [
+      -0.5200000405311584,
+      -0.6000000238418579,
+      0.0
+    ],
+    "bounds_max": [
+      0.5200000405311584,
+      0.5600000023841858,
+      0.4884999990463257
+    ],
+    "dimensions": [
+      1.040000081062317,
+      1.1600000262260437,
+      0.4884999990463257
+    ],
+    "triangles": 624,
+    "mesh_count": 2,
+    "material_names": [
+      "PhaseFive_EnemyOrange",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_RubberDark",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 7,
+    "meshes": [
+      {
+        "name": "HeavyEnemyBody",
+        "triangles": 576,
+        "vertices": 336,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_EnemyOrange",
+          "PhaseFive_RubberDark"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.3283239042418075,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ImpactArmorAssembly",
+        "triangles": 48,
+        "vertices": 32,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.067901764061783,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          -0.27000001072883606,
+          0.20000000298023224
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "HeavyEnemy",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "HeavyEnemy",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ImpactPivot",
+        "parent": "HeavyEnemy",
+        "world_position": [
+          0.0,
+          -0.27000001072883606,
+          0.20000000298023224
+        ],
+        "local_position": [
+          0.0,
+          -0.27000001072883606,
+          0.20000000298023224
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "source_reopened": {
+    "bounds_min": [
+      -0.5200000405311584,
+      -0.6000000238418579,
+      0.0
+    ],
+    "bounds_max": [
+      0.5200000405311584,
+      0.5600000023841858,
+      0.4884999990463257
+    ],
+    "dimensions": [
+      1.040000081062317,
+      1.1600000262260437,
+      0.4884999990463257
+    ],
+    "triangles": 624,
+    "mesh_count": 2,
+    "material_names": [
+      "PhaseFive_EnemyOrange",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_RubberDark",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 7,
+    "meshes": [
+      {
+        "name": "HeavyEnemyBody",
+        "triangles": 576,
+        "vertices": 336,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_EnemyOrange",
+          "PhaseFive_RubberDark"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.3283239042418075,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ImpactArmorAssembly",
+        "triangles": 48,
+        "vertices": 32,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.067901764061783,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          -0.27000001072883606,
+          0.20000000298023224
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "HeavyEnemy",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ForwardReference",
+        "parent": "HeavyEnemy",
+        "world_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ImpactPivot",
+        "parent": "HeavyEnemy",
+        "world_position": [
+          0.0,
+          -0.27000001072883606,
+          0.20000000298023224
+        ],
+        "local_position": [
+          0.0,
+          -0.27000001072883606,
+          0.20000000298023224
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "fbx_reimported": {
+    "bounds_min": [
+      -0.5200000405311584,
+      -0.6000000238418579,
+      -6.842669364459653e-08
+    ],
+    "bounds_max": [
+      0.5200000405311584,
+      0.5600000619888306,
+      0.48850002884864807
+    ],
+    "dimensions": [
+      1.040000081062317,
+      1.1600000858306885,
+      0.4885000972753417
+    ],
+    "triangles": 624,
+    "mesh_count": 2,
+    "material_names": [
+      "PhaseFive_EnemyOrange",
+      "PhaseFive_MetalSteel",
+      "PhaseFive_RubberDark",
+      "PhaseFive_StructureDark"
+    ],
+    "material_slot_count": 7,
+    "meshes": [
+      {
+        "name": "HeavyEnemyBody",
+        "triangles": 576,
+        "vertices": 336,
+        "material_slots": 4,
+        "materials": [
+          "PhaseFive_StructureDark",
+          "PhaseFive_MetalSteel",
+          "PhaseFive_EnemyOrange",
+          "PhaseFive_RubberDark"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.32832390465522443,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ImpactArmorAssembly",
+        "triangles": 48,
+        "vertices": 32,
+        "material_slots": 3,
+        "materials": [
+          "PhaseFive_MetalSteel",
+          "PhaseFive_StructureDark",
+          "PhaseFive_EnemyOrange"
+        ],
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "signed_volume": 0.06790176406178301,
+        "non_finite_normals": 0,
+        "negative_determinant": false,
+        "world_origin": [
+          0.0,
+          -0.26999998092651367,
+          0.20000004768371582
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "name": "ForwardReference",
+        "parent": "HeavyEnemy",
+        "world_position": [
+          0.0,
+          -0.5,
+          8.146034247147327e-08
+        ],
+        "local_position": [
+          0.0,
+          -0.5,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "ImpactPivot",
+        "parent": "HeavyEnemy",
+        "world_position": [
+          0.0,
+          -0.26999998092651367,
+          0.20000004768371582
+        ],
+        "local_position": [
+          0.0,
+          -0.27000001072883606,
+          0.20000000298023224
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "name": "HeavyEnemy",
+        "parent": null,
+        "world_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "local_scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "source_reopened": true,
+    "export_reimported": true,
+    "save_reopen_dimensions_equal": true,
+    "export_bounds_maximum_difference": 6.842669364459653e-08,
+    "export_bounds_match": true,
+    "triangles_match": true,
+    "mesh_count_match": true,
+    "material_names_match": true,
+    "grounded": true,
+    "positive_mesh_transforms": true,
+    "valid_surface_normals": true
+  },
+  "motion_checks": [
+    {
+      "pivot": "ImpactPivot",
+      "mesh": "ImpactArmorAssembly",
+      "sample_vertex_displacement_metres": 0.07999998443759965,
+      "moving_part_responds": true,
+      "neutral_pose_restored": true,
+      "mesh_origin_matches_pivot": true,
+      "stationary_body_unchanged": true
+    }
+  ]
+}

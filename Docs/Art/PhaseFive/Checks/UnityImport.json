@@ -1,0 +1,559 @@
+{
+  "unityVersion": "6000.6.5f1",
+  "scene": "Assets/Defend/Content/Art/PhaseFive/Scenes/PhaseFiveModelInspection.unity",
+  "originalActiveScene": "Assets/Defend/Content/Scenes/Dev/EnergyFrontDefense.unity",
+  "restoredActiveScene": "Assets/Defend/Content/Scenes/Dev/EnergyFrontDefense.unity",
+  "editorStopped": true,
+  "originalSceneDirty": false,
+  "previewSceneSaved": true,
+  "savedPrefabsReopened": true,
+  "assetCount": 13,
+  "sharedMaterialCount": 8,
+  "assets": [
+    {
+      "name": "Reactor",
+      "source": "Assets/Defend/Content/Art/PhaseFive/Models/Buildings/Reactor.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/Reactor.prefab",
+      "rawDimensions": [
+        0.84,
+        1.11,
+        0.840000033
+      ],
+      "prefabDimensions": [
+        0.840000033,
+        1.11,
+        0.84
+      ],
+      "minimum": [
+        -0.420000017,
+        0,
+        -0.42
+      ],
+      "forward": [
+        4.37113847e-08,
+        5.96046448e-08,
+        0.49999997
+      ],
+      "triangles": 1600,
+      "renderers": 1,
+      "materialSlots": 4,
+      "materials": [
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_ArmorIvory.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_EnergyCyan.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_MetalSteel.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_StructureDark.mat"
+      ],
+      "pivots": [],
+      "identityTransforms": true,
+      "grounded": true,
+      "positiveForward": true,
+      "matchingDimensions": true,
+      "validNormals": true,
+      "sharedMaterialReferences": true
+    },
+    {
+      "name": "Relay",
+      "source": "Assets/Defend/Content/Art/PhaseFive/Models/Buildings/Relay.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/Relay.prefab",
+      "rawDimensions": [
+        0.72,
+        1.165,
+        0.7200001
+      ],
+      "prefabDimensions": [
+        0.7200001,
+        1.16499984,
+        0.72
+      ],
+      "minimum": [
+        -0.360000044,
+        0,
+        -0.36
+      ],
+      "forward": [
+        4.37113847e-08,
+        5.96046448e-08,
+        0.49999997
+      ],
+      "triangles": 820,
+      "renderers": 1,
+      "materialSlots": 4,
+      "materials": [
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_ArmorIvory.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_EnergyCyan.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_MetalSteel.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_StructureDark.mat"
+      ],
+      "pivots": [],
+      "identityTransforms": true,
+      "grounded": true,
+      "positiveForward": true,
+      "matchingDimensions": true,
+      "validNormals": true,
+      "sharedMaterialReferences": true
+    },
+    {
+      "name": "RapidTurret",
+      "source": "Assets/Defend/Content/Art/PhaseFive/Models/Buildings/RapidTurret.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/RapidTurret.prefab",
+      "rawDimensions": [
+        0.84,
+        0.6175,
+        0.9264999
+      ],
+      "prefabDimensions": [
+        0.840000033,
+        0.6175,
+        0.926499963
+      ],
+      "minimum": [
+        -0.420000017,
+        -5.96046448e-08,
+        -0.42
+      ],
+      "forward": [
+        4.37113847e-08,
+        5.96046448e-08,
+        0.49999997
+      ],
+      "triangles": 988,
+      "renderers": 3,
+      "materialSlots": 9,
+      "materials": [
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_ArmorIvory.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_EnergyCyan.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_MetalSteel.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_StructureDark.mat"
+      ],
+      "pivots": [
+        "TurretYaw",
+        "BarrelRecoil",
+        "MuzzleLeft",
+        "MuzzleRight"
+      ],
+      "identityTransforms": true,
+      "grounded": true,
+      "positiveForward": true,
+      "matchingDimensions": true,
+      "validNormals": true,
+      "sharedMaterialReferences": true
+    },
+    {
+      "name": "HeavyTurret",
+      "source": "Assets/Defend/Content/Art/PhaseFive/Models/Buildings/HeavyTurret.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/HeavyTurret.prefab",
+      "rawDimensions": [
+        0.88,
+        0.705000043,
+        0.959
+      ],
+      "prefabDimensions": [
+        0.880000055,
+        0.705000043,
+        0.958999932
+      ],
+      "minimum": [
+        -0.440000027,
+        -5.96046448e-08,
+        -0.44
+      ],
+      "forward": [
+        4.37113847e-08,
+        5.96046448e-08,
+        0.49999997
+      ],
+      "triangles": 956,
+      "renderers": 3,
+      "materialSlots": 10,
+      "materials": [
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_ArmorIvory.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_EnergyCyan.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_MetalSteel.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_StructureDark.mat"
+      ],
+      "pivots": [
+        "TurretYaw",
+        "BarrelRecoil",
+        "Muzzle"
+      ],
+      "identityTransforms": true,
+      "grounded": true,
+      "positiveForward": true,
+      "matchingDimensions": true,
+      "validNormals": true,
+      "sharedMaterialReferences": true
+    },
+    {
+      "name": "AreaTurret",
+      "source": "Assets/Defend/Content/Art/PhaseFive/Models/Buildings/AreaTurret.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/AreaTurret.prefab",
+      "rawDimensions": [
+        0.84,
+        0.580000043,
+        0.84
+      ],
+      "prefabDimensions": [
+        0.840000033,
+        0.580000043,
+        0.84
+      ],
+      "minimum": [
+        -0.420000017,
+        -5.96046448e-08,
+        -0.42
+      ],
+      "forward": [
+        4.37113847e-08,
+        5.96046448e-08,
+        0.49999997
+      ],
+      "triangles": 1124,
+      "renderers": 3,
+      "materialSlots": 10,
+      "materials": [
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_ArmorIvory.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_EnergyCyan.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_MetalSteel.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_StructureDark.mat"
+      ],
+      "pivots": [
+        "TurretYaw",
+        "BarrelRecoil",
+        "Muzzle"
+      ],
+      "identityTransforms": true,
+      "grounded": true,
+      "positiveForward": true,
+      "matchingDimensions": true,
+      "validNormals": true,
+      "sharedMaterialReferences": true
+    },
+    {
+      "name": "Core",
+      "source": "Assets/Defend/Content/Art/PhaseFive/Models/Buildings/Core.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/Core.prefab",
+      "rawDimensions": [
+        0.86,
+        0.796000063,
+        0.8600001
+      ],
+      "prefabDimensions": [
+        0.8600001,
+        0.796000063,
+        0.86
+      ],
+      "minimum": [
+        -0.430000037,
+        -5.96046448e-08,
+        -0.43
+      ],
+      "forward": [
+        4.37113847e-08,
+        5.96046448e-08,
+        0.49999997
+      ],
+      "triangles": 1244,
+      "renderers": 1,
+      "materialSlots": 4,
+      "materials": [
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_ArmorIvory.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_EnergyCyan.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_MetalSteel.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_StructureDark.mat"
+      ],
+      "pivots": [],
+      "identityTransforms": true,
+      "grounded": true,
+      "positiveForward": true,
+      "matchingDimensions": true,
+      "validNormals": true,
+      "sharedMaterialReferences": true
+    },
+    {
+      "name": "StandardEnemy",
+      "source": "Assets/Defend/Content/Art/PhaseFive/Models/Enemies/StandardEnemy.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/StandardEnemy.prefab",
+      "rawDimensions": [
+        0.76000005,
+        0.480000079,
+        0.759999931
+      ],
+      "prefabDimensions": [
+        0.76,
+        0.480000049,
+        0.76
+      ],
+      "minimum": [
+        -0.380000025,
+        -5.96046448e-08,
+        -0.38
+      ],
+      "forward": [
+        4.37113847e-08,
+        5.96046448e-08,
+        0.49999997
+      ],
+      "triangles": 600,
+      "renderers": 5,
+      "materialSlots": 15,
+      "materials": [
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_EnemyOrange.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_MetalSteel.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_StructureDark.mat"
+      ],
+      "pivots": [
+        "LegFrontLeftPivot",
+        "LegFrontRightPivot",
+        "LegRearLeftPivot",
+        "LegRearRightPivot"
+      ],
+      "identityTransforms": true,
+      "grounded": true,
+      "positiveForward": true,
+      "matchingDimensions": true,
+      "validNormals": true,
+      "sharedMaterialReferences": true
+    },
+    {
+      "name": "FastEnemy",
+      "source": "Assets/Defend/Content/Art/PhaseFive/Models/Enemies/FastEnemy.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/FastEnemy.prefab",
+      "rawDimensions": [
+        0.5,
+        0.254000068,
+        0.8
+      ],
+      "prefabDimensions": [
+        0.5,
+        0.254000038,
+        0.799999952
+      ],
+      "minimum": [
+        -0.25000003,
+        -5.96046448e-08,
+        -0.399999976
+      ],
+      "forward": [
+        4.37113847e-08,
+        5.96046448e-08,
+        0.49999997
+      ],
+      "triangles": 324,
+      "renderers": 1,
+      "materialSlots": 4,
+      "materials": [
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_ArmorIvory.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_EnemyOrange.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_MetalSteel.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_StructureDark.mat"
+      ],
+      "pivots": [],
+      "identityTransforms": true,
+      "grounded": true,
+      "positiveForward": true,
+      "matchingDimensions": true,
+      "validNormals": true,
+      "sharedMaterialReferences": true
+    },
+    {
+      "name": "HeavyEnemy",
+      "source": "Assets/Defend/Content/Art/PhaseFive/Models/Enemies/HeavyEnemy.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/HeavyEnemy.prefab",
+      "rawDimensions": [
+        1.04000008,
+        0.488500059,
+        1.16
+      ],
+      "prefabDimensions": [
+        1.0400002,
+        0.488500059,
+        1.16000009
+      ],
+      "minimum": [
+        -0.5200001,
+        -5.96046448e-08,
+        -0.560000062
+      ],
+      "forward": [
+        4.37113847e-08,
+        5.96046448e-08,
+        0.49999997
+      ],
+      "triangles": 624,
+      "renderers": 2,
+      "materialSlots": 7,
+      "materials": [
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_EnemyOrange.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_MetalSteel.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_RubberDark.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_StructureDark.mat"
+      ],
+      "pivots": [
+        "ImpactPivot"
+      ],
+      "identityTransforms": true,
+      "grounded": true,
+      "positiveForward": true,
+      "matchingDimensions": true,
+      "validNormals": true,
+      "sharedMaterialReferences": true
+    },
+    {
+      "name": "RockLowA",
+      "source": "Assets/Defend/Content/Art/PhaseFive/Models/Environment/RockLowA.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/RockLowA.prefab",
+      "rawDimensions": [
+        0.87,
+        0.420000046,
+        0.68
+      ],
+      "prefabDimensions": [
+        0.87,
+        0.42,
+        0.679999948
+      ],
+      "minimum": [
+        -0.435,
+        -2.98023224e-08,
+        -0.339999974
+      ],
+      "forward": [
+        4.37113847e-08,
+        5.96046448e-08,
+        0.49999997
+      ],
+      "triangles": 46,
+      "renderers": 1,
+      "materialSlots": 1,
+      "materials": [
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_RockSlate.mat"
+      ],
+      "pivots": [],
+      "identityTransforms": true,
+      "grounded": true,
+      "positiveForward": true,
+      "matchingDimensions": true,
+      "validNormals": true,
+      "sharedMaterialReferences": true
+    },
+    {
+      "name": "RockLowB",
+      "source": "Assets/Defend/Content/Art/PhaseFive/Models/Environment/RockLowB.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/RockLowB.prefab",
+      "rawDimensions": [
+        0.92,
+        0.280000031,
+        0.59
+      ],
+      "prefabDimensions": [
+        0.92,
+        0.28,
+        0.5899999
+      ],
+      "minimum": [
+        -0.46,
+        -2.98023224e-08,
+        -0.294999957
+      ],
+      "forward": [
+        4.37113847e-08,
+        5.96046448e-08,
+        0.49999997
+      ],
+      "triangles": 46,
+      "renderers": 1,
+      "materialSlots": 1,
+      "materials": [
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_RockSlate.mat"
+      ],
+      "pivots": [],
+      "identityTransforms": true,
+      "grounded": true,
+      "positiveForward": true,
+      "matchingDimensions": true,
+      "validNormals": true,
+      "sharedMaterialReferences": true
+    },
+    {
+      "name": "IndustrialFloor",
+      "source": "Assets/Defend/Content/Art/PhaseFive/Models/Environment/IndustrialFloor.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/IndustrialFloor.prefab",
+      "rawDimensions": [
+        1,
+        0.0860001147,
+        0.99999994
+      ],
+      "prefabDimensions": [
+        1.00000012,
+        0.08600002,
+        1
+      ],
+      "minimum": [
+        -0.50000006,
+        -5.96046448e-08,
+        -0.5
+      ],
+      "forward": [
+        4.37113847e-08,
+        5.96046448e-08,
+        0.49999997
+      ],
+      "triangles": 324,
+      "renderers": 1,
+      "materialSlots": 3,
+      "materials": [
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_GroundConcrete.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_MetalSteel.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_StructureDark.mat"
+      ],
+      "pivots": [],
+      "identityTransforms": true,
+      "grounded": true,
+      "positiveForward": true,
+      "matchingDimensions": true,
+      "validNormals": true,
+      "sharedMaterialReferences": true
+    },
+    {
+      "name": "EntranceMarker",
+      "source": "Assets/Defend/Content/Art/PhaseFive/Models/Environment/EntranceMarker.fbx",
+      "prefab": "Assets/Defend/Content/Art/PhaseFive/Prefabs/EntranceMarker.prefab",
+      "rawDimensions": [
+        0.84,
+        0.08800007,
+        0.599999964
+      ],
+      "prefabDimensions": [
+        0.840000033,
+        0.08800005,
+        0.6
+      ],
+      "minimum": [
+        -0.420000017,
+        -3.7252903e-08,
+        -0.3
+      ],
+      "forward": [
+        4.37113847e-08,
+        5.96046448e-08,
+        0.49999997
+      ],
+      "triangles": 492,
+      "renderers": 1,
+      "materialSlots": 4,
+      "materials": [
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_ArmorIvory.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_EnemyOrange.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_MetalSteel.mat",
+        "Assets/Defend/Content/Art/PhaseFive/Materials/PhaseFive_StructureDark.mat"
+      ],
+      "pivots": [],
+      "identityTransforms": true,
+      "grounded": true,
+      "positiveForward": true,
+      "matchingDimensions": true,
+      "validNormals": true,
+      "sharedMaterialReferences": true
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "source_reopened": true,
+  "blender_version": "5.2.2 LTS",
+  "shared_material_count": 8,
+  "material_names": [
+    "PhaseFive_ArmorIvory",
+    "PhaseFive_EnemyOrange",
+    "PhaseFive_EnergyCyan",
+    "PhaseFive_GroundConcrete",
+    "PhaseFive_MetalSteel",
+    "PhaseFive_RockSlate",
+    "PhaseFive_RubberDark",
+    "PhaseFive_StructureDark"
+  ],
+  "all_editable_principled_materials": true,
+  "fake_users_preserve_library": true,
+  "external_texture_files": [],
+  "image_datablocks": [
+    {
+      "name": "Render Result",
+      "source": "VIEWER"
+    },
+    {
+      "name": "Viewer Node",
+      "source": "VIEWER"
+    }
+  ],
+  "render_assets_are_not_part_of_library": true
+}
