@@ -193,8 +193,7 @@ namespace Defend.Simulation
                         double vertical = target.CenterZ - source.CenterZ;
                         double distance = Math.Sqrt(horizontal * horizontal + vertical * vertical);
                         if (distance > range) continue;
-                        double fraction = distance / range;
-                        long efficiency = (long)Math.Round((1 - settings.MaximumLossAtRange * fraction * fraction) * EnergyArithmetic.EfficiencyScale);
+                        long efficiency = EfficiencyAt(distance, range, settings.MaximumLossAtRange);
                         if (efficiency <= 0) continue;
                         int flightTicks = Math.Max(1, checked((int)Math.Ceiling(distance * settings.FlightTicksPerCell)));
                         EnergyEdge edge = new EnergyEdge(source, target, efficiency, flightTicks);
@@ -429,5 +428,12 @@ namespace Defend.Simulation
 
         private static int Bucket(double position) { return (int)Math.Floor(position / BucketSize); }
         private static long BucketKey(int x, int z) { return ((long)x << 32) | (uint)z; }
+
+        internal static long EfficiencyAt(double distance, double range, double maximumLossAtRange)
+        {
+            if (range <= 0 || distance > range) return 0;
+            double fraction = distance / range;
+            return (long)Math.Round((1 - maximumLossAtRange * fraction * fraction) * EnergyArithmetic.EfficiencyScale);
+        }
     }
 }

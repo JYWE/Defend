@@ -17,6 +17,8 @@ namespace Defend.Unity
         [SerializeField] private BattlePresentation battlePresentation;
         [SerializeField] private BattleControlPanel battleControlPanel;
         [SerializeField] private CombatArtPresentation combatArt;
+        [SerializeField] private GameObject energyLossCellPrefab;
+        private EnergyLossGridOverlay energyLossGridOverlay;
         private readonly List<InitialPlacement> initialPlacements = new List<InitialPlacement>();
         private SimulationClock clock;
         private float nextPanelRefresh;
@@ -86,6 +88,12 @@ namespace Defend.Unity
             if (battleSettings == null) World.Enqueue(WorldCommand.SetTestLoad(experimentSettings.EnableTestLoad));
             StepWorld();
             presentation.Initialize(World, experimentSettings);
+            if (energyLossCellPrefab != null)
+            {
+                if (energyLossGridOverlay == null)
+                    energyLossGridOverlay = gameObject.AddComponent<EnergyLossGridOverlay>();
+                energyLossGridOverlay.Initialize(World, energyLossCellPrefab);
+            }
             gridInput.Initialize(this, presentation);
             gridInput.Cancel();
             controlPanel?.Initialize(this);
@@ -118,6 +126,7 @@ namespace Defend.Unity
             // 暂停时保留现有插值位置；时钟不再积累时间，表现也不会退回上一个逻辑位置。
             double interpolation = Math.Min(1, clock.PendingSeconds * experimentSettings.TicksPerSecond);
             presentation.Refresh(World, SelectedBuildingId, World.CurrentTick + interpolation);
+            energyLossGridOverlay?.Refresh(World, SelectedBuildingId);
             battlePresentation?.Refresh(World, World.CurrentTick + interpolation);
             combatArt?.Refresh(World.CurrentTick + interpolation, SelectedBuildingId, Paused, Time.unscaledDeltaTime);
             if (Time.unscaledTime >= nextPanelRefresh)

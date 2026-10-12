@@ -1816,6 +1816,7 @@ MonoBehaviour:
   mapViewport: {fileID: 1478769566}
   mapExtent: 42
   zoomFactor: 1
+  zoomSensitivity: 0.22
 --- !u!81 &211192391
 AudioListener:
   m_ObjectHideFlags: 0
@@ -12861,6 +12862,8 @@ MonoBehaviour:
   battleSettings: {fileID: 11400000, guid: 19ea2a5918c949e4b9ab9147ca3c0faa, type: 2}
   battlePresentation: {fileID: 1788376444}
   battleControlPanel: {fileID: 1478769565}
+  combatArt: {fileID: 0}
+  energyLossCellPrefab: {fileID: 8125692559271823675, guid: 716cdf41799a21a45ba4e314f4cf82f5, type: 3}
 --- !u!114 &1788376443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12888,10 +12891,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Defend.Unity::Defend.Unity.BattlePresentation
   enemyPrefab: {fileID: 3559527654073003989, guid: b06470efe53d81f4fbf0c6788c5fafb5, type: 3}
+  fastEnemyPrefab: {fileID: 0}
+  heavyEnemyPrefab: {fileID: 0}
+  externalCombatEffects: 0
   shotPrefab: {fileID: 4104480645397863668, guid: 95dd3b8805eaa2241a983c69e8c11536, type: 3}
   enemyRoot: {fileID: 1248946935}
   shotRoot: {fileID: 587317392}
   maximumVisibleShots: 256
+  targetMarkerPrefab: {fileID: 0}
+  targetMarkerRoot: {fileID: 0}
+  maximumVisibleTargetMarkers: 100
 --- !u!114 &1788376445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12909,6 +12918,7 @@ MonoBehaviour:
   - {fileID: 6156515199075694793, guid: 9cc188097f44d2448b1444f48c12e287, type: 3}
   - {fileID: 620402880798633884, guid: e8ce8d94814409b4aab127e2577af931, type: 3}
   - {fileID: 717609847020657354, guid: a076f79e7300f7944be74f82f0a10cfc, type: 3}
+  externalTransferEffects: 0
   authoredBuildings:
   - {fileID: 554071381}
   - {fileID: 1866437143}
@@ -12930,6 +12940,8 @@ MonoBehaviour:
   connectionRoot: {fileID: 641181345}
   placementPreview: {fileID: 823370120}
   previewRenderer: {fileID: 823370118}
+  selectionRange: {fileID: 0}
+  previewRange: {fileID: 0}
 --- !u!4 &1788376446
 Transform:
   m_ObjectHideFlags: 0

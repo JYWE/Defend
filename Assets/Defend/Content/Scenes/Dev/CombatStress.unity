@@ -2473,6 +2473,7 @@ MonoBehaviour:
   mapViewport: {fileID: 1478769566}
   mapExtent: 42
   zoomFactor: 1
+  zoomSensitivity: 0.22
 --- !u!81 &211192391
 AudioListener:
   m_ObjectHideFlags: 0
@@ -10813,6 +10814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 981456209}
   - component: {fileID: 981456208}
+  - component: {fileID: 981456210}
   m_Layer: 0
   m_Name: "BackgroundClearCamera \xB7 \u5168\u5C4F\u5E95\u8272\u6E05\u9664"
   m_TagString: Untagged
@@ -10886,6 +10888,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &981456210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981456207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1001 &999670296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18088,6 +18134,8 @@ MonoBehaviour:
   battleSettings: {fileID: 11400000, guid: 4a0aefdafe6a6824f8ac34edcce8b53e, type: 2}
   battlePresentation: {fileID: 1788376444}
   battleControlPanel: {fileID: 1478769565}
+  combatArt: {fileID: 0}
+  energyLossCellPrefab: {fileID: 8125692559271823675, guid: 716cdf41799a21a45ba4e314f4cf82f5, type: 3}
 --- !u!114 &1788376443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18115,10 +18163,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Defend.Unity::Defend.Unity.BattlePresentation
   enemyPrefab: {fileID: 3559527654073003989, guid: b06470efe53d81f4fbf0c6788c5fafb5, type: 3}
+  fastEnemyPrefab: {fileID: 0}
+  heavyEnemyPrefab: {fileID: 0}
+  externalCombatEffects: 0
   shotPrefab: {fileID: 4104480645397863668, guid: 95dd3b8805eaa2241a983c69e8c11536, type: 3}
   enemyRoot: {fileID: 1248946935}
   shotRoot: {fileID: 587317392}
   maximumVisibleShots: 256
+  targetMarkerPrefab: {fileID: 0}
+  targetMarkerRoot: {fileID: 0}
+  maximumVisibleTargetMarkers: 100
 --- !u!114 &1788376445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18136,6 +18190,7 @@ MonoBehaviour:
   - {fileID: 6156515199075694793, guid: 9cc188097f44d2448b1444f48c12e287, type: 3}
   - {fileID: 620402880798633884, guid: e8ce8d94814409b4aab127e2577af931, type: 3}
   - {fileID: 717609847020657354, guid: a076f79e7300f7944be74f82f0a10cfc, type: 3}
+  externalTransferEffects: 0
   authoredBuildings:
   - {fileID: 524039344}
   - {fileID: 625497758}
@@ -18244,6 +18299,8 @@ MonoBehaviour:
   connectionRoot: {fileID: 641181345}
   placementPreview: {fileID: 823370120}
   previewRenderer: {fileID: 823370118}
+  selectionRange: {fileID: 0}
+  previewRange: {fileID: 0}
 --- !u!4 &1788376446
 Transform:
   m_ObjectHideFlags: 0

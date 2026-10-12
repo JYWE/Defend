@@ -7763,6 +7763,7 @@ MonoBehaviour:
   battlePresentation: {fileID: 894416939}
   battleControlPanel: {fileID: 6930615625520012542}
   combatArt: {fileID: 712133795}
+  energyLossCellPrefab: {fileID: 8125692559271823675, guid: 716cdf41799a21a45ba4e314f4cf82f5, type: 3}
 --- !u!114 &894416938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9432,6 +9433,7 @@ MonoBehaviour:
   mapViewport: {fileID: 952886701728192192}
   mapExtent: 42
   zoomFactor: 0.55
+  zoomSensitivity: 0.22
 --- !u!81 &1081189925
 AudioListener:
   m_ObjectHideFlags: 0
