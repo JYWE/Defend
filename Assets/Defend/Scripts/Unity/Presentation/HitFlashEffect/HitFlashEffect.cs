@@ -4,8 +4,8 @@ using UnityEngine;
 namespace Defend.Unity
 {
     /// <summary>
-    /// 受击闪白效果。
-    /// 将该组件挂在敌人根对象上即可。
+    /// 敌人受击闪白。
+    /// 暂停时冻结，游戏倍速不会影响闪白持续时间。
     /// </summary>
     public sealed class HitFlashEffect : MonoBehaviour
     {
@@ -16,27 +16,61 @@ namespace Defend.Unity
 
         /// <summary>
         /// 当前闪白强度。
-        /// 外部将其设置为 1 即可触发一次完整闪白。
+        /// 外部设置为 1 即可触发闪白。
         /// </summary>
         [Range(0f, 1f)]
-        public float WhiteOverlay = 0f;
+        public float WhiteOverlay;
 
         /// <summary>
-        /// 每秒衰减的闪白强度。
+        /// 每个现实时间秒衰减的闪白强度。
         /// </summary>
         [Min(0f)]
         public float DecayPerSecond = 6f;
 
-        private readonly List<Material> materials =
+        public bool Paused { get; private set; }
+
+        private readonly List<Material> flashMaterials =
             new List<Material>();
 
+        private readonly List<Material> ownedMaterials =
+            new List<Material>();
+
+        private readonly List<RendererBinding> rendererBindings =
+            new List<RendererBinding>();
+
         private float lastAppliedValue = -1f;
+        private bool materialsCached;
+
+        private sealed class RendererBinding
+        {
+            public readonly Renderer Renderer;
+            public readonly Material[] OriginalMaterials;
+            public readonly Material[] RuntimeMaterials;
+
+            public RendererBinding(
+                Renderer renderer,
+                Material[] originalMaterials,
+                Material[] runtimeMaterials)
+            {
+                Renderer = renderer;
+                OriginalMaterials = originalMaterials;
+                RuntimeMaterials = runtimeMaterials;
+            }
+        }
 
         private void Awake()
         {
             CacheMaterials();
+        }
 
-            // 立即同步初始值。
+        private void OnEnable()
+        {
+            if (!materialsCached)
+            {
+                CacheMaterials();
+            }
+
+            lastAppliedValue = -1f;
             ApplyWhiteOverlay(WhiteOverlay);
         }
 
@@ -46,12 +80,19 @@ namespace Defend.Unity
                 Mathf.Clamp01(WhiteOverlay);
 
             // 先应用当前值，确保外部设置为 1 后，
-            // 下一帧可以完整显示一次闪白。
+            // 可以完整显示一次闪白。
             if (!Mathf.Approximately(
                     currentValue,
                     lastAppliedValue))
             {
                 ApplyWhiteOverlay(currentValue);
+            }
+
+            // 游戏暂停时冻结闪白。
+            if (Paused)
+            {
+                WhiteOverlay = currentValue;
+                return;
             }
 
             if (currentValue <= 0f)
@@ -60,27 +101,53 @@ namespace Defend.Unity
                 return;
             }
 
-            // 使用线性衰减。
+            // 使用现实帧时间，不受游戏倍速和 Time.timeScale 影响。
             WhiteOverlay =
                 Mathf.MoveTowards(
                     currentValue,
                     0f,
                     DecayPerSecond *
-                    Time.deltaTime);
+                    Time.unscaledDeltaTime);
         }
 
-        /// <summary>
-        /// 获取自身和所有子物体上的材质实例。
-        /// </summary>
+        public void SetPaused(bool paused)
+        {
+            Paused = paused;
+        }
+
+        public void Flash()
+        {
+            WhiteOverlay = 1f;
+
+            // 立即应用，避免等待下一帧。
+            ApplyWhiteOverlay(1f);
+        }
+
+        public void ResetFlash()
+        {
+            WhiteOverlay = 0f;
+            ApplyWhiteOverlay(0f);
+        }
+
         private void CacheMaterials()
         {
-            materials.Clear();
+            if (materialsCached)
+            {
+                return;
+            }
 
-            HashSet<Material> uniqueMaterials =
-                new HashSet<Material>();
+            materialsCached = true;
+
+            flashMaterials.Clear();
+            ownedMaterials.Clear();
+            rendererBindings.Clear();
 
             Renderer[] renderers =
                 GetComponentsInChildren<Renderer>(true);
+
+            // 同一个原始材质在同一个敌人内部复用同一个运行时实例。
+            Dictionary<Material, Material> runtimeBySource =
+                new Dictionary<Material, Material>();
 
             for (int rendererIndex = 0;
                  rendererIndex < renderers.Length;
@@ -94,72 +161,93 @@ namespace Defend.Unity
                     continue;
                 }
 
-                // 先读取共享材质，只筛选支持闪白参数的材质。
-                Material[] sharedMaterials =
+                // 读取共享材质，不会自动创建实例。
+                Material[] originalMaterials =
                     renderer.sharedMaterials;
 
-                Material[] instanceMaterials = null;
+                Material[] assignedMaterials =
+                    (Material[])originalMaterials.Clone();
+
+                Material[] runtimeMaterials =
+                    new Material[originalMaterials.Length];
+
+                bool changed = false;
 
                 for (int materialIndex = 0;
-                     materialIndex < sharedMaterials.Length;
+                     materialIndex < originalMaterials.Length;
                      materialIndex++)
                 {
-                    Material sharedMaterial =
-                        sharedMaterials[materialIndex];
+                    Material sourceMaterial =
+                        originalMaterials[materialIndex];
 
-                    if (sharedMaterial == null ||
-                        !sharedMaterial.HasProperty(
-                            WhiteOverlayId))
+                    if (sourceMaterial == null ||
+                        !sourceMaterial.HasProperty(WhiteOverlayId))
                     {
                         continue;
                     }
 
-                    // 只有确认需要闪白时才获取实例材质，
-                    // 避免修改项目中的共享材质资源。
-                    if (instanceMaterials == null)
+                    if (!runtimeBySource.TryGetValue(
+                            sourceMaterial,
+                            out Material runtimeMaterial))
                     {
-                        instanceMaterials =
-                            renderer.materials;
+                        runtimeMaterial =
+                            new Material(sourceMaterial)
+                            {
+                                name =
+                                    sourceMaterial.name +
+                                    " (Hit Flash Instance)",
+
+                                hideFlags =
+                                    HideFlags.DontSave
+                            };
+
+                        runtimeBySource.Add(
+                            sourceMaterial,
+                            runtimeMaterial);
+
+                        ownedMaterials.Add(
+                            runtimeMaterial);
+
+                        flashMaterials.Add(
+                            runtimeMaterial);
                     }
 
-                    if (materialIndex >= instanceMaterials.Length)
-                    {
-                        continue;
-                    }
+                    assignedMaterials[materialIndex] =
+                        runtimeMaterial;
 
-                    Material instanceMaterial =
-                        instanceMaterials[materialIndex];
+                    runtimeMaterials[materialIndex] =
+                        runtimeMaterial;
 
-                    if (instanceMaterial == null ||
-                        !instanceMaterial.HasProperty(
-                            WhiteOverlayId))
-                    {
-                        continue;
-                    }
-
-                    if (uniqueMaterials.Add(instanceMaterial))
-                    {
-                        materials.Add(instanceMaterial);
-                    }
+                    changed = true;
                 }
+
+                if (!changed)
+                {
+                    continue;
+                }
+
+                renderer.sharedMaterials =
+                    assignedMaterials;
+
+                rendererBindings.Add(
+                    new RendererBinding(
+                        renderer,
+                        originalMaterials,
+                        runtimeMaterials));
             }
         }
 
-        /// <summary>
-        /// 将闪白强度写入所有相关材质。
-        /// </summary>
-        private void ApplyWhiteOverlay(
-            float value)
+        private void ApplyWhiteOverlay(float value)
         {
             value =
                 Mathf.Clamp01(value);
 
             for (int index = 0;
-                 index < materials.Count;
+                 index < flashMaterials.Count;
                  index++)
             {
                 Material material =
-                    materials[index];
+                    flashMaterials[index];
 
                 if (material == null)
                 {
@@ -174,29 +262,101 @@ namespace Defend.Unity
             lastAppliedValue = value;
         }
 
-        /// <summary>
-        /// 可选的代码调用接口。
-        /// 等价于把 WhiteOverlay 设置为 1。
-        /// </summary>
-        public void Flash()
+        private void OnDestroy()
         {
-            WhiteOverlay = 1f;
+            RestoreOriginalMaterials();
+            DestroyOwnedMaterials();
+
+            flashMaterials.Clear();
+            ownedMaterials.Clear();
+            rendererBindings.Clear();
+
+            materialsCached = false;
         }
-        private void OnEnable()
+
+        private void RestoreOriginalMaterials()
         {
-            if (materials.Count == 0)
+            for (int bindingIndex = 0;
+                 bindingIndex < rendererBindings.Count;
+                 bindingIndex++)
             {
-                CacheMaterials();
-            }
+                RendererBinding binding =
+                    rendererBindings[bindingIndex];
 
-            lastAppliedValue = -1f;
-            ApplyWhiteOverlay(WhiteOverlay);
+                if (binding.Renderer == null)
+                {
+                    continue;
+                }
+
+                Material[] currentMaterials =
+                    binding.Renderer.sharedMaterials;
+
+                int materialCount =
+                    Mathf.Min(
+                        currentMaterials.Length,
+                        binding.RuntimeMaterials.Length);
+
+                bool changed = false;
+
+                for (int materialIndex = 0;
+                     materialIndex < materialCount;
+                     materialIndex++)
+                {
+                    Material runtimeMaterial =
+                        binding.RuntimeMaterials[materialIndex];
+
+                    if (runtimeMaterial == null)
+                    {
+                        continue;
+                    }
+
+                    // 只恢复仍然由本组件持有的材质槽。
+                    if (currentMaterials[materialIndex] !=
+                        runtimeMaterial)
+                    {
+                        continue;
+                    }
+
+                    currentMaterials[materialIndex] =
+                        materialIndex <
+                        binding.OriginalMaterials.Length
+                            ? binding.OriginalMaterials[materialIndex]
+                            : null;
+
+                    changed = true;
+                }
+
+                if (changed)
+                {
+                    binding.Renderer.sharedMaterials =
+                        currentMaterials;
+                }
+            }
         }
 
-        public void ResetFlash()
+        private void DestroyOwnedMaterials()
         {
-            WhiteOverlay = 0f;
-            ApplyWhiteOverlay(0f);
+            for (int index = 0;
+                 index < ownedMaterials.Count;
+                 index++)
+            {
+                Material material =
+                    ownedMaterials[index];
+
+                if (material == null)
+                {
+                    continue;
+                }
+
+                if (Application.isPlaying)
+                {
+                    Destroy(material);
+                }
+                else
+                {
+                    DestroyImmediate(material);
+                }
+            }
         }
     }
 }

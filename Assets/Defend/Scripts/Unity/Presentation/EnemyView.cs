@@ -8,23 +8,12 @@ namespace Defend.Unity
     /// </summary>
     public sealed class EnemyView : MonoBehaviour
     {
-        [SerializeField]
-        private Transform healthFill;
-
-        [SerializeField]
-        private Renderer bodyRenderer;
-
-        [SerializeField]
-        private Transform facingRoot;
-
-        [SerializeField]
-        private GameObject strikeFlash;
-
-        [SerializeField]
-        private bool industrialModel;
-
-        [SerializeField]
-        private MechanicalEnemyMotion mechanicalMotion;
+        [SerializeField] private Transform healthFill;
+        [SerializeField] private Renderer bodyRenderer;
+        [SerializeField] private Transform facingRoot;
+        [SerializeField] private GameObject strikeFlash;
+        [SerializeField] private bool industrialModel;
+        [SerializeField] private MechanicalEnemyMotion mechanicalMotion;
 
         public EnemyKind Kind { get; private set; }
 
@@ -46,7 +35,6 @@ namespace Defend.Unity
 
         private void Awake()
         {
-            // 支持把 HitFlashEffect 放在敌人根对象或任意子对象上。
             hitFlashEffect =
                 GetComponent<HitFlashEffect>();
 
@@ -70,12 +58,17 @@ namespace Defend.Unity
             strikeFlash = strike;
         }
 
+        public void SetPaused(bool paused)
+        {
+            hitFlashEffect?.SetPaused(paused);
+        }
+
         public void ResetForReuse()
         {
             hasPosition = false;
             previousHealth = 0;
 
-            // 敌人对象重新从对象池取出时，清除上一次残留的闪白。
+            // 清除对象池上一次使用时残留的闪白。
             hitFlashEffect?.ResetFlash();
 
             if (facingRoot != null)
