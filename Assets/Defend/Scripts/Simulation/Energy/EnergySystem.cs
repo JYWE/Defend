@@ -31,6 +31,19 @@ namespace Defend.Simulation
         public IReadOnlyList<EnergyTransferSnapshot> Deliveries => transport.Deliveries;
         public int ActiveBatchCount => transport.Batches.Count;
         public EnergyPlanningStatistics PlanningStatistics => planner.Statistics;
+        /// <summary>供表现层查询某个输出建筑到地图位置的一跳传输效率。</summary>
+        public double DirectEfficiencyAt(BuildingState source, double targetX, double targetZ)
+        {
+            if (source == null || !source.CanOutput) return 0;
+            double range = source.Definition.TransmissionRange;
+            if (range <= 0) return 0;
+            double horizontal = targetX - source.CenterX;
+            double vertical = targetZ - source.CenterZ;
+            double distance = Math.Sqrt(horizontal * horizontal + vertical * vertical);
+            if (distance > range) return 0;
+            long efficiency = EnergyRoutePlanner.EfficiencyAt(distance, range, settings.MaximumLossAtRange);
+            return efficiency <= 0 ? 0 : (double)efficiency / EnergyArithmetic.EfficiencyScale;
+        }
         internal Action<BuildingState, BuildingState, long, long> TransferCompleted
         {
             set { transport.TransferCompleted = value; }

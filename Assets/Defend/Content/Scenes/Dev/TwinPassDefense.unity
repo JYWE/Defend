@@ -8465,6 +8465,8 @@ MonoBehaviour:
   battleSettings: {fileID: 11400000, guid: 7037291ac39531247b8bab1ebdb8cb06, type: 2}
   battlePresentation: {fileID: 894416939}
   battleControlPanel: {fileID: 2041003341}
+  combatArt: {fileID: 0}
+  energyLossCellPrefab: {fileID: 8125692559271823675, guid: 716cdf41799a21a45ba4e314f4cf82f5, type: 3}
 --- !u!114 &894416938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8492,10 +8494,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Defend.Unity::Defend.Unity.BattlePresentation
   enemyPrefab: {fileID: 3940561331574354395, guid: bbb773858a759844ebcb70f1ba39d04d, type: 3}
+  fastEnemyPrefab: {fileID: 0}
+  heavyEnemyPrefab: {fileID: 0}
+  externalCombatEffects: 0
   shotPrefab: {fileID: 4104480645397863668, guid: 95dd3b8805eaa2241a983c69e8c11536, type: 3}
   enemyRoot: {fileID: 1702902379}
   shotRoot: {fileID: 1302935866}
   maximumVisibleShots: 256
+  targetMarkerPrefab: {fileID: 0}
+  targetMarkerRoot: {fileID: 0}
+  maximumVisibleTargetMarkers: 100
 --- !u!114 &894416940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8515,6 +8523,7 @@ MonoBehaviour:
   - {fileID: 1017103161053109050, guid: 36f1e0152dbd3b34180b5642c86414d8, type: 3}
   - {fileID: 7578179568797945989, guid: 0f24318256fccf34280e9dcf9f8b815c, type: 3}
   - {fileID: 6635567481701718266, guid: f49fefd16ba26934b8735cbdc023d0b6, type: 3}
+  externalTransferEffects: 0
   authoredBuildings:
   - {fileID: 797232354}
   - {fileID: 239079626}
@@ -10056,6 +10065,7 @@ MonoBehaviour:
   mapViewport: {fileID: 2041003342}
   mapExtent: 42
   zoomFactor: 1
+  zoomSensitivity: 0.22
 --- !u!81 &1081189925
 AudioListener:
   m_ObjectHideFlags: 0

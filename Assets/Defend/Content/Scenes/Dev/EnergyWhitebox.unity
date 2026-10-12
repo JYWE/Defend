@@ -2363,6 +2363,8 @@ MonoBehaviour:
   battleSettings: {fileID: 0}
   battlePresentation: {fileID: 0}
   battleControlPanel: {fileID: 0}
+  combatArt: {fileID: 0}
+  energyLossCellPrefab: {fileID: 8125692559271823675, guid: 716cdf41799a21a45ba4e314f4cf82f5, type: 3}
 --- !u!114 &336120303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2394,6 +2396,7 @@ MonoBehaviour:
   - {fileID: 6156515199075694793, guid: 9cc188097f44d2448b1444f48c12e287, type: 3}
   - {fileID: 620402880798633884, guid: e8ce8d94814409b4aab127e2577af931, type: 3}
   - {fileID: 717609847020657354, guid: a076f79e7300f7944be74f82f0a10cfc, type: 3}
+  externalTransferEffects: 0
   authoredBuildings:
   - {fileID: 1593284361}
   - {fileID: 392215017}
@@ -2410,6 +2413,8 @@ MonoBehaviour:
   connectionRoot: {fileID: 2064552341}
   placementPreview: {fileID: 1775707480}
   previewRenderer: {fileID: 1775707478}
+  selectionRange: {fileID: 0}
+  previewRange: {fileID: 0}
 --- !u!4 &336120305
 Transform:
   m_ObjectHideFlags: 0
@@ -9855,6 +9860,7 @@ MonoBehaviour:
   mapViewport: {fileID: 652253824}
   mapExtent: 42
   zoomFactor: 0.65
+  zoomSensitivity: 0.22
 --- !u!81 &1430614480
 AudioListener:
   m_ObjectHideFlags: 0
