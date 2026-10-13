@@ -87,6 +87,13 @@ namespace Defend.Unity
 
         private long lastAppliedTick = -1;
         private long lastSelectedId = -1;
+<<<<<<< HEAD
+=======
+        public IReadOnlyList<BuildingView> AuthoredBuildings => authoredBuildings;
+        public void Invalidate() { lastAppliedTick = -1; }
+        public bool ShowNetwork { get; set; } = true;
+        public bool ShowRanges { get; set; } = true;
+>>>>>>> upstream/main
 
         /*
          * 连接线缓存。
@@ -351,6 +358,7 @@ namespace Defend.Unity
                     selectedId);
 
                 RefreshConnections(world);
+<<<<<<< HEAD
 
                 BuildingState selected =
                     world.FindBuilding(selectedId);
@@ -383,6 +391,13 @@ namespace Defend.Unity
                 RefreshTransfers(
                     world,
                     displayTick);
+=======
+                var selected = world.FindBuilding(selectedId);
+                DrawRange(selectionRange, selected == null ? 0 : selected.CenterX, selected == null ? 0 : selected.CenterZ,
+                    selected == null ? 0 : Range(world, selected.Definition), ShowRanges && selected != null && selected.IsAlive && !selected.IsSold);
+                lastAppliedTick = world.CurrentTick;
+                lastSelectedId = selectedId;
+>>>>>>> upstream/main
             }
         }
 
@@ -395,11 +410,16 @@ namespace Defend.Unity
             foreach (KeyValuePair<long, BuildingView> item
                      in buildingViews)
             {
+<<<<<<< HEAD
                 BuildingState state =
                     world.FindBuilding(item.Key);
 
                 if (state == null ||
                     state.IsSold)
+=======
+                BuildingState state = world.FindBuilding(item.Key);
+                if (state == null || state.IsSold || !state.IsAlive)
+>>>>>>> upstream/main
                 {
                     if (authoredViews.Contains(item.Value))
                     {
@@ -418,6 +438,7 @@ namespace Defend.Unity
 
             foreach (long id in removedBuildings)
             {
+<<<<<<< HEAD
                 buildingViews.Remove(id);
             }
 
@@ -429,6 +450,11 @@ namespace Defend.Unity
                     world.Buildings[index];
 
                 if (state.IsSold)
+=======
+                BuildingState state = world.Buildings[index];
+                if (state.IsSold || !state.IsAlive) continue;
+                if (!buildingViews.TryGetValue(state.Id, out BuildingView view))
+>>>>>>> upstream/main
                 {
                     continue;
                 }
@@ -469,8 +495,24 @@ namespace Defend.Unity
             placementPreview.gameObject.SetActive(
                 visible);
 
+<<<<<<< HEAD
             if (!visible &&
                 previewRange != null)
+=======
+        public void ShowPreviewRange(GameWorld world, BuildingDefinition definition, int x, int z, bool visible)
+            => DrawRange(previewRange, x + definition.Width * 0.5, z + definition.Depth * 0.5, Range(world, definition), visible);
+
+        private static double Range(GameWorld world, BuildingDefinition definition) =>
+            definition.Kind == BuildingKind.Reactor || definition.Kind == BuildingKind.Relay || definition.Kind == BuildingKind.Battery ? definition.TransmissionRange :
+            world.Battle != null && definition.Kind != BuildingKind.Core ? world.Battle.Settings.GetTurret(definition.Kind).Range : 0;
+
+        private static void DrawRange(LineRenderer line, double x, double z, double radius, bool visible)
+        {
+            if (line == null) return;
+            line.gameObject.SetActive(visible && radius > 0);
+            if (!visible || radius <= 0) return;
+            for (int index = 0; index < line.positionCount; index++)
+>>>>>>> upstream/main
             {
                 previewRange.gameObject.SetActive(false);
             }
@@ -653,10 +695,27 @@ namespace Defend.Unity
 
             while (connectionViews.Count < count)
             {
+<<<<<<< HEAD
                 connectionViews.Add(
                     Instantiate(
                         connectionPrefab,
                         connectionRoot));
+=======
+                LineRenderer line = connectionViews[index];
+                line.gameObject.SetActive(ShowNetwork && index < count);
+                if (index >= count) continue;
+                EnergyConnection connection = world.Energy.Connections[index];
+                BuildingState source = world.FindBuilding(connection.SourceId);
+                BuildingState target = world.FindBuilding(connection.TargetId);
+                if (source == null || target == null) { line.gameObject.SetActive(false); continue; }
+                bool related = connection.SourceId == lastSelectedId || connection.TargetId == lastSelectedId;
+                Color color = related ? new Color(0.4f, 1f, 0.8f, 1) : new Color(0.12f, 0.22f, 0.26f, 1);
+                connectionProperties.SetColor("_BaseColor", color); connectionProperties.SetColor("_Color", color);
+                line.SetPropertyBlock(connectionProperties);
+                line.startWidth = line.endWidth = related ? 0.075f : 0.018f;
+                line.SetPosition(0, new Vector3((float)source.CenterX, 0.11f, (float)source.CenterZ));
+                line.SetPosition(1, new Vector3((float)target.CenterX, 0.11f, (float)target.CenterZ));
+>>>>>>> upstream/main
             }
 
             EnsureConnectionCacheCapacity(
