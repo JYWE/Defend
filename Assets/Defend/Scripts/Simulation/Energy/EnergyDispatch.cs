@@ -11,7 +11,6 @@ namespace Defend.Simulation
             public EnergyNodeRuntime Owner;
             public EnergyRoute Route;
             public long Sent;
-            public EnergyBatch StoredBatch;
         }
         private sealed class OfferSearch
         {
@@ -29,7 +28,6 @@ namespace Defend.Simulation
         private readonly EnergyRoutePlanner planner;
         private readonly EnergyTransport transport;
         private readonly WeightedEnergySchedule allocationSchedule;
-        private readonly BatterySupplyPolicy batteries;
         private readonly Dictionary<long, OfferSearch> offerSearches = new Dictionary<long, OfferSearch>();
         private readonly List<EnergyNodeRuntime> sources = new List<EnergyNodeRuntime>();
         private long offerTopologyVersion = -1;
@@ -38,14 +36,13 @@ namespace Defend.Simulation
         private int relayCursor;
 
         public EnergyDispatch(List<EnergyNodeRuntime> orderedNodes, List<BuildingState> consumers,
-            EnergyRoutePlanner planner, EnergyTransport transport, WeightedEnergySchedule allocationSchedule, EnergySettings settings)
+            EnergyRoutePlanner planner, EnergyTransport transport, WeightedEnergySchedule allocationSchedule)
         {
             this.orderedNodes = orderedNodes;
             this.consumers = consumers;
             this.planner = planner;
             this.transport = transport;
             this.allocationSchedule = allocationSchedule;
-            batteries = new BatterySupplyPolicy(settings);
         }
 
         public bool Run(long tick)
@@ -121,7 +118,7 @@ namespace Defend.Simulation
                         EnergyBatch batch = node.Batches[batchIndex];
                         if (batch.Destination != consumer || batch.EligibleTick > tick) continue;
                         long available = Math.Min(batch.Amount, node.AvailableOutput);
-                        available = LimitForNextHop(available, batch.Route.Edges[batch.RouteEdge], tick);
+                        available = LimitForNextHop(available, batch.Route.Edges[batch.RouteEdge]);
                         sent = EnergyArithmetic.LimitSend(available, Math.Min(credit, batch.Commitment), batch.Route, batch.RouteEdge);
                         if (sent > 0) { selected = batch; break; }
                     }
@@ -142,7 +139,7 @@ namespace Defend.Simulation
                                 if (planner.LastQueryDeferred) batch.PlanningDeferredTick = tick;
                                 continue;
                             }
-                            long available = LimitForNextHop(Math.Min(batch.Amount, node.AvailableOutput), route.Edges[0], tick);
+                            long available = LimitForNextHop(Math.Min(batch.Amount, node.AvailableOutput), route.Edges[0]);
                             sent = EnergyArithmetic.LimitSend(available, Math.Min(credit, Demand(consumer)), route);
                             if (sent > 0) { selected = batch; replacementRoute = route; break; }
                         }
@@ -183,7 +180,7 @@ namespace Defend.Simulation
                 Offer selected = limit > 0 ? FindOffer(consumer, limit, tick) : null;
                 if (selected != null)
                 {
-                    transport.AssignAndSend(selected.Owner, selected.StoredBatch, consumer, selected.Route, selected.Sent, tick);
+                    transport.AssignAndSend(selected.Owner, null, consumer, selected.Route, selected.Sent, tick);
                     transactions++;
                     misses = 0;
                 }
@@ -233,32 +230,10 @@ namespace Defend.Simulation
                 route = PreferAvailableRoute(offer.Owner.Building, consumer, null, route);
                 if (route == null) continue;
                 long available = Math.Min(offer.Owner.AvailableOutput, offer.Owner.Building.StoredEnergy);
-                available = LimitForNextHop(available, route.Edges[0], tick);
+                available = LimitForNextHop(available, route.Edges[0]);
                 long sent = EnergyArithmetic.LimitSend(available, limit, route);
                 if (sent <= 0 || (selected != null && selected.Route.Cost <= route.Cost)) continue;
                 selected = new Offer { Owner = offer.Owner, Route = route, Sent = sent };
-            }
-            // 电池与反应堆竞争同一个终端额度，不为每块电池复制需求或权重。
-            // 每个电池按入库次序寻找首个可服务批次；历史无路的旧批次不会阻塞后续库存。
-            foreach (EnergyNodeRuntime node in orderedNodes)
-            {
-                if (node.Building.Kind != BuildingKind.Battery || !node.Building.CanOutput || node.AvailableOutput <= 0 ||
-                    !batteries.CanSupport(node, consumer, tick)) continue;
-                foreach (EnergyBatch batch in node.Batches)
-                {
-                    if (candidateChecks++ >= MaximumCandidateChecksPerTick) break;
-                    if (batch.Retired || batch.InFlight || batch.Destination != null || batch.EligibleTick > tick) continue;
-                    EnergyRoute route = planner.Find(node.Building, consumer, batch.History, false);
-                    if (route != null) route = PreferAvailableRoute(node.Building, consumer, batch.History, route);
-                    if (route == null) continue;
-                    long available = LimitForNextHop(Math.Min(batch.Amount, node.AvailableOutput), route.Edges[0], tick);
-                    long sent = EnergyArithmetic.LimitSend(available, Math.Min(limit, Demand(consumer)), route);
-                    sent = batteries.LimitSend(node, consumer, route, sent, tick);
-                    if (sent <= 0) continue;
-                    if (selected == null || route.Cost < selected.Route.Cost)
-                        selected = new Offer { Owner = node, StoredBatch = batch, Route = route, Sent = sent };
-                    break;
-                }
             }
             return selected;
         }
@@ -311,11 +286,10 @@ namespace Defend.Simulation
             return original;
         }
 
-        private long LimitForNextHop(long available, EnergyEdge edge, long tick)
+        private static long LimitForNextHop(long available, EnergyEdge edge)
         {
             if (edge.Target.IsConsumer) return available;
-            long space = edge.Target.Kind == BuildingKind.Battery
-                ? transport.AvailableChargingSpace(edge.Target, tick + edge.FlightTicks) : FreeSpace(edge.Target);
+            long space = FreeSpace(edge.Target);
             if (space <= 0) return 0;
             if (space >= available) return available;
             // 保持本跳 received <= space。反向上取整得到第一个超额发送量，再减一。

@@ -11,9 +11,6 @@ namespace Defend.Unity
         [SerializeField] private EnemyView enemyPrefab;
         [SerializeField] private EnemyView fastEnemyPrefab;
         [SerializeField] private EnemyView heavyEnemyPrefab;
-        [SerializeField] private EnemyView demolisherEnemyPrefab;
-        [SerializeField] private EnemyView convergerEnemyPrefab;
-        public void ShowSelection(long id) { foreach (var pair in enemyViews) pair.Value.ShowSelection(pair.Key == id); }
         [SerializeField] private bool externalCombatEffects;
         private readonly Dictionary<EnemyKind, ObjectPool<EnemyView>> variantPools = new Dictionary<EnemyKind, ObjectPool<EnemyView>>();
         public EnemyView FindView(long id) => enemyViews.TryGetValue(id, out var view) ? view : null;
@@ -69,8 +66,6 @@ namespace Defend.Unity
                     view => { if (view != null) Destroy(view.gameObject); }, false, 8, maximumVisibleTargetMarkers);
             AddVariant(EnemyKind.Fast, fastEnemyPrefab);
             AddVariant(EnemyKind.Heavy, heavyEnemyPrefab);
-            AddVariant(EnemyKind.Demolisher, demolisherEnemyPrefab);
-            AddVariant(EnemyKind.Converger, convergerEnemyPrefab);
             foreach (EnemyView view in enemyViews.Values) Pool(view.Kind).Release(view);
             enemyViews.Clear();
             foreach (LineRenderer view in shotViews) shotPool.Release(view);
@@ -84,7 +79,7 @@ namespace Defend.Unity
             lastAppliedTick = -1;
         }
 
-        public void Refresh(GameWorld world, double displayTick, bool paused = false)
+        public void Refresh(GameWorld world, double displayTick)
         {
             if (world.Battle == null) return;
             if (lastAppliedTick != world.CurrentTick)
@@ -93,11 +88,7 @@ namespace Defend.Unity
                 lastAppliedTick = world.CurrentTick;
             }
             float progress = Mathf.Clamp01((float)(displayTick - world.CurrentTick));
-            foreach (EnemyView view in enemyViews.Values)
-            {
-                view.SetPaused(paused);
-                view.Interpolate(progress);
-            }
+            foreach (EnemyView view in enemyViews.Values) view.Interpolate(progress);
         }
 
         private void RefreshSnapshots(GameWorld world)

@@ -17,7 +17,6 @@ namespace Defend.Unity
         [SerializeField] private BattlePresentation battlePresentation;
         [SerializeField] private BattleControlPanel battleControlPanel;
         [SerializeField] private CombatArtPresentation combatArt;
-        [SerializeField] private DefenseInterface defenseInterface;
         [SerializeField] private GameObject energyLossCellPrefab;
         private EnergyLossGridOverlay energyLossGridOverlay;
         private readonly List<InitialPlacement> initialPlacements = new List<InitialPlacement>();
@@ -31,11 +30,6 @@ namespace Defend.Unity
         public bool Paused { get; private set; }
         public double Speed { get; private set; } = 1;
         public long SelectedBuildingId { get; private set; }
-        public EnemyState SelectedEnemy { get; private set; }
-        public bool AtStartPage { get; private set; }
-        public bool BlocksWorldInput => AtStartPage || (defenseInterface != null && defenseInterface.BlocksWorldInput);
-        public BattlePresentation BattleViews => battlePresentation;
-        public WorldPresentation WorldViews => presentation;
         public string Feedback { get; private set; } = "选择建筑查看供给，或从左侧购买建筑。";
         public GridInputController GridInput => gridInput;
         public BuildingState SelectedBuilding => World?.FindBuilding(SelectedBuildingId);
@@ -77,7 +71,6 @@ namespace Defend.Unity
                 throw new InvalidOperationException("场景缺少必需引用，请在 Inspector 中检查 GameSessionRoot。");
             foreach (BuildingView view in presentation.AuthoredBuildings) initialPlacements.Add(new InitialPlacement(view));
             CreateWorld();
-            if (defenseInterface != null) { defenseInterface.Initialize(this); ReturnToStart(); }
         }
 
         private void CreateWorld()
@@ -93,7 +86,7 @@ namespace Defend.Unity
                 World.Enqueue(WorldCommand.Place(placement.Kind, placement.X, placement.Z));
             }
             if (battleSettings == null) World.Enqueue(WorldCommand.SetTestLoad(experimentSettings.EnableTestLoad));
-            World.ProcessCommands();
+            StepWorld();
             presentation.Initialize(World, experimentSettings);
             if (energyLossCellPrefab != null)
             {
@@ -105,16 +98,14 @@ namespace Defend.Unity
             gridInput.Cancel();
             controlPanel?.Initialize(this);
             battlePresentation?.Initialize();
-            if (defenseInterface == null) battleControlPanel?.Initialize(this);
+            battleControlPanel?.Initialize(this);
             Paused = false;
             Speed = 1;
             SelectedBuildingId = 0;
-            SelectedEnemy = null;
-            AtStartPage = false;
             lastReportedCommand = World.LastCommandResult.Sequence;
             Feedback = Battle == null ? "选择建筑查看供给，或从左侧购买建筑。" : "部署炮塔与供电线路，准备好后开始第一波。";
             presentation.Refresh(World, SelectedBuildingId, World.CurrentTick);
-            battlePresentation?.Refresh(World, World.CurrentTick, Paused);
+            battlePresentation?.Refresh(World, World.CurrentTick);
             combatArt?.Initialize(World, presentation, battlePresentation);
             RefreshPanels();
         }
@@ -125,8 +116,7 @@ namespace Defend.Unity
             gridInput.ProcessInput();
             bool terminal = Battle != null && (Battle.State == BattleState.Victory || Battle.State == BattleState.Defeat);
             if (terminal && gridInput.HasPlacement) gridInput.Cancel();
-            clock.Advance(Time.unscaledDeltaTime, Paused || terminal || AtStartPage, Speed, StepWorld);
-            if (SelectedBuilding != null && (!SelectedBuilding.IsAlive || SelectedBuilding.IsSold)) SelectedBuildingId = 0;
+            clock.Advance(Time.unscaledDeltaTime, Paused || terminal, Speed, StepWorld);
             CommandResult result = World.LastCommandResult;
             if (result.Sequence != 0 && result.Sequence != lastReportedCommand)
             {
@@ -137,8 +127,7 @@ namespace Defend.Unity
             double interpolation = Math.Min(1, clock.PendingSeconds * experimentSettings.TicksPerSecond);
             presentation.Refresh(World, SelectedBuildingId, World.CurrentTick + interpolation);
             energyLossGridOverlay?.Refresh(World, SelectedBuildingId);
-            battlePresentation?.Refresh(World, World.CurrentTick + interpolation, Paused || terminal || AtStartPage);
-            battlePresentation?.ShowSelection(SelectedEnemy != null && SelectedEnemy.IsAlive ? SelectedEnemy.Id : 0);
+            battlePresentation?.Refresh(World, World.CurrentTick + interpolation);
             combatArt?.Refresh(World.CurrentTick + interpolation, SelectedBuildingId, Paused, Time.unscaledDeltaTime);
             if (Time.unscaledTime >= nextPanelRefresh)
             {
@@ -161,14 +150,12 @@ namespace Defend.Unity
                 ShowFeedback("本次防守已结束，请重新开始。");
                 return;
             }
-            if (AtStartPage) return;
-            // 所有输入即时经过同一权威事务；暂停只停止时间，非法输入不会留到下一个阶段。
-            Feedback = World.Submit(command).Message;
-            presentation.Invalidate();
+            World.Enqueue(command);
+            Feedback = Paused ? (Battle == null ? "操作已排队；单步或继续模拟后生效。" : "操作已排队，继续后生效。") : "操作已提交。";
             RefreshPanels();
         }
 
-        private void RefreshPanels() { controlPanel?.Refresh(); if (defenseInterface == null) battleControlPanel?.Refresh(); defenseInterface?.Refresh(); }
+        private void RefreshPanels() { controlPanel?.Refresh(); battleControlPanel?.Refresh(); }
         private void StepWorld()
         {
             Action<double> measured = SimulationStepMeasured;
@@ -187,21 +174,17 @@ namespace Defend.Unity
             if (combatArt != null && combatArt.IsBoundTo(World))
             {
                 presentation.Refresh(World, SelectedBuildingId, World.CurrentTick);
-                battlePresentation?.Refresh(World, World.CurrentTick, Paused);
+                battlePresentation?.Refresh(World, World.CurrentTick);
                 combatArt.ObserveStep(World);
             }
         }
-        public void Select(long id) { SelectedEnemy = null; SelectedBuildingId = id; defenseInterface?.RevealDetails(); RefreshPanels(); }
-        public void SelectEnemy(EnemyState enemy) { SelectedBuildingId = 0; SelectedEnemy = enemy; defenseInterface?.RevealDetails(); RefreshPanels(); }
-        public void ClearSelection() { SelectedEnemy = null; SelectedBuildingId = 0; RefreshPanels(); }
+        public void Select(long id) { SelectedBuildingId = id; RefreshPanels(); }
         public void ShowFeedback(string message) { Feedback = message; RefreshPanels(); }
-        public void TogglePause() { if (defenseInterface != null) defenseInterface.TogglePause(); else SetPaused(!Paused); }
-        public void SetPaused(bool value) { Paused = value; RefreshPanels(); }
+        public void TogglePause() { Paused = !Paused; RefreshPanels(); }
         public void SingleStep() { Paused = true; StepWorld(); RefreshPanels(); }
         public void CycleSpeed() { Speed = Speed == 1 ? 2 : Speed == 2 ? 4 : 1; RefreshPanels(); }
-        public void StartWave() { if (Battle == null || !World.CanEditBuildings || AtStartPage) return; gridInput.Cancel(); Submit(WorldCommand.StartWave()); if (Battle.State == BattleState.Combat) SetPaused(false); }
-        public void Restart() { if (World != null) { CreateWorld(); defenseInterface?.SessionStarted(); } }
-        public void ReturnToStart() { if (!AtStartPage && World != null) CreateWorld(); gridInput.Cancel(); ClearSelection(); AtStartPage = true; Paused = true; defenseInterface?.ShowStart(); }
+        public void StartWave() { if (Battle != null) Submit(WorldCommand.StartWave()); }
+        public void Restart() { if (World != null) CreateWorld(); }
         public void ToggleTestLoad() => Submit(WorldCommand.SetTestLoad(!World.TestLoadEnabled));
         public void SellSelected() { if (SelectedBuilding != null) Submit(WorldCommand.Sell(SelectedBuildingId)); }
         public void DamageSelected() { if (SelectedBuilding != null) Submit(WorldCommand.Damage(SelectedBuildingId, SelectedBuilding.Definition.MaximumHealth)); }
