@@ -6,14 +6,12 @@ using UnityEngine.Pool;
 namespace Defend.Unity
 {
     /// <summary>
-    /// 统一同步建筑、连线和运输表现，
-    /// 防止每个能量物体各自执行 Update。
+    /// 统一同步建筑、连线和运输表现，防止每个能量物体各自执行 Update。
     /// </summary>
     public sealed class WorldPresentation : MonoBehaviour
     {
         [SerializeField] private BuildingView[] buildingPrefabs;
         [SerializeField] private bool externalTransferEffects;
-
         [SerializeField] private BuildingView[] authoredBuildings;
         [SerializeField] private EnergyTransferView transferPrefab;
         [SerializeField] private LineRenderer connectionPrefab;
@@ -27,55 +25,27 @@ namespace Defend.Unity
         [SerializeField] private LineRenderer selectionRange;
         [SerializeField] private LineRenderer previewRange;
 
-        public BuildingView FindView(long id)
-        {
-            return buildingViews.TryGetValue(
-                id,
-                out BuildingView view)
-                    ? view
-                    : null;
-        }
+        private readonly Dictionary<long, BuildingView> buildingViews =
+            new Dictionary<long, BuildingView>();
 
-        public void ConfigureRanges(
-            LineRenderer selected,
-            LineRenderer preview)
-        {
-            selectionRange = selected;
-            previewRange = preview;
-        }
+        private readonly List<long> removedBuildings =
+            new List<long>();
 
-        private readonly Dictionary<long, BuildingView>
-            buildingViews =
-                new Dictionary<long, BuildingView>();
+        private readonly List<EnergyTransferView> transferViews =
+            new List<EnergyTransferView>();
 
-        private readonly List<long>
-            removedBuildings =
-                new List<long>();
+        private readonly List<LineRenderer> connectionViews =
+            new List<LineRenderer>();
 
-        private readonly List<EnergyTransferView>
-            transferViews =
-                new List<EnergyTransferView>();
-
-        private readonly List<LineRenderer>
-            connectionViews =
-                new List<LineRenderer>();
-
-        private ObjectPool<EnergyTransferView>
-            transferPool;
-
-        private readonly Dictionary<
-            BuildingKind,
-            ObjectPool<BuildingView>>
+        private readonly Dictionary<BuildingKind, ObjectPool<BuildingView>>
             buildingPools =
-                new Dictionary<
-                    BuildingKind,
-                    ObjectPool<BuildingView>>();
+                new Dictionary<BuildingKind, ObjectPool<BuildingView>>();
 
-        private readonly HashSet<BuildingView>
-            authoredViews =
-                new HashSet<BuildingView>();
+        private readonly HashSet<BuildingView> authoredViews =
+            new HashSet<BuildingView>();
 
-        // 与对象池、身份映射同属单次播放会话。
+        private ObjectPool<EnergyTransferView> transferPool;
+
         [System.NonSerialized]
         private Vector3[] authoredPositions;
 
@@ -88,12 +58,9 @@ namespace Defend.Unity
         private long lastAppliedTick = -1;
         private long lastSelectedId = -1;
 
-        /*
-         * 连接线缓存。
-         *
-         * 每个数组的下标对应 connectionViews 中的下标。
-         * connectionViews[index] 对应当前能源连接列表中的第 index 条连接。
-         */
+        private bool showNetwork = true;
+        private bool showRanges = true;
+
         private long[] cachedConnectionSourceIds =
             new long[0];
 
@@ -112,9 +79,60 @@ namespace Defend.Unity
         private bool[] cachedConnectionActive =
             new bool[0];
 
-        public IReadOnlyList<BuildingView>
-            AuthoredBuildings =>
-                authoredBuildings;
+        public IReadOnlyList<BuildingView> AuthoredBuildings =>
+            authoredBuildings;
+
+        public bool ShowNetwork
+        {
+            get => showNetwork;
+            set
+            {
+                if (showNetwork == value)
+                {
+                    return;
+                }
+
+                showNetwork = value;
+                Invalidate();
+            }
+        }
+
+        public bool ShowRanges
+        {
+            get => showRanges;
+            set
+            {
+                if (showRanges == value)
+                {
+                    return;
+                }
+
+                showRanges = value;
+                Invalidate();
+            }
+        }
+
+        public BuildingView FindView(long id)
+        {
+            return buildingViews.TryGetValue(
+                id,
+                out BuildingView view)
+                    ? view
+                    : null;
+        }
+
+        public void ConfigureRanges(
+            LineRenderer selected,
+            LineRenderer preview)
+        {
+            selectionRange = selected;
+            previewRange = preview;
+        }
+
+        public void Invalidate()
+        {
+            lastAppliedTick = -1;
+        }
 
         public void Configure(
             BuildingView[] prefabs,
@@ -180,19 +198,16 @@ namespace Defend.Unity
                         authoredBuildings[index]);
                 }
 
-                foreach (BuildingView prefab
-                         in buildingPrefabs)
+                foreach (BuildingView prefab in buildingPrefabs)
                 {
-                    BuildingView captured =
-                        prefab;
+                    BuildingView captured = prefab;
 
                     buildingPools.Add(
                         prefab.Definition.Kind,
                         new ObjectPool<BuildingView>(
-                            () =>
-                                Instantiate(
-                                    captured,
-                                    buildingRoot),
+                            () => Instantiate(
+                                captured,
+                                buildingRoot),
 
                             view =>
                             {
@@ -219,9 +234,7 @@ namespace Defend.Unity
                 }
             }
 
-            // 初始场景实例保留，动态实例归还对象池。
-            foreach (BuildingView view
-                     in buildingViews.Values)
+            foreach (BuildingView view in buildingViews.Values)
             {
                 if (!authoredViews.Contains(view))
                 {
@@ -232,8 +245,7 @@ namespace Defend.Unity
 
             buildingViews.Clear();
 
-            foreach (EnergyTransferView view
-                     in transferViews)
+            foreach (EnergyTransferView view in transferViews)
             {
                 transferPool.Release(view);
             }
@@ -265,10 +277,9 @@ namespace Defend.Unity
             {
                 transferPool =
                     new ObjectPool<EnergyTransferView>(
-                        () =>
-                            Instantiate(
-                                transferPrefab,
-                                energyRoot),
+                        () => Instantiate(
+                            transferPrefab,
+                            energyRoot),
 
                         view =>
                         {
@@ -338,13 +349,10 @@ namespace Defend.Unity
             long selectedId,
             double displayTick)
         {
-            // 静止建筑与连接只随逻辑状态或选择变化刷新，
-            // 运输插值仍然每帧执行。
             if (lastAppliedTick != world.CurrentTick ||
                 lastSelectedId != selectedId)
             {
-                lastSelectedId =
-                    selectedId;
+                lastSelectedId = selectedId;
 
                 RefreshBuildings(
                     world,
@@ -368,7 +376,9 @@ namespace Defend.Unity
                         : Range(
                             world,
                             selected.Definition),
+                    ShowRanges &&
                     selected != null &&
+                    selected.IsAlive &&
                     !selected.IsSold);
 
                 lastAppliedTick =
@@ -399,7 +409,8 @@ namespace Defend.Unity
                     world.FindBuilding(item.Key);
 
                 if (state == null ||
-                    state.IsSold)
+                    state.IsSold ||
+                    !state.IsAlive)
                 {
                     if (authoredViews.Contains(item.Value))
                     {
@@ -428,7 +439,8 @@ namespace Defend.Unity
                 BuildingState state =
                     world.Buildings[index];
 
-                if (state.IsSold)
+                if (state.IsSold ||
+                    !state.IsAlive)
                 {
                     continue;
                 }
@@ -539,7 +551,9 @@ namespace Defend.Unity
             if (definition.Kind ==
                     BuildingKind.Reactor ||
                 definition.Kind ==
-                    BuildingKind.Relay)
+                    BuildingKind.Relay ||
+                definition.Kind ==
+                    BuildingKind.Battery)
             {
                 return definition.TransmissionRange;
             }
@@ -577,7 +591,8 @@ namespace Defend.Unity
                     shouldBeActive);
             }
 
-            if (!shouldBeActive)
+            if (!shouldBeActive ||
+                line.positionCount < 2)
             {
                 return;
             }
@@ -670,6 +685,7 @@ namespace Defend.Unity
                     connectionViews[index];
 
                 bool shouldBeActive =
+                    ShowNetwork &&
                     index < count;
 
                 if (cachedConnectionActive[index] !=
@@ -682,8 +698,6 @@ namespace Defend.Unity
                         shouldBeActive;
                 }
 
-                // 连接已经超出当前数量。
-                // 清空缓存，确保未来重新出现时强制刷新。
                 if (!shouldBeActive)
                 {
                     ClearConnectionCache(index);
@@ -701,18 +715,12 @@ namespace Defend.Unity
                     world.FindBuilding(
                         connection.TargetId);
 
-                // 理论上能源连接不应该引用不存在的建筑。
-                // 如果出现暂时不一致，隐藏该线并清空缓存。
                 if (source == null ||
-                    target == null)
+                    target == null ||
+                    !source.IsAlive ||
+                    !target.IsAlive)
                 {
-                    if (cachedConnectionActive[index])
-                    {
-                        line.gameObject.SetActive(false);
-                        cachedConnectionActive[index] =
-                            false;
-                    }
-
+                    line.gameObject.SetActive(false);
                     ClearConnectionCache(index);
                     continue;
                 }
@@ -751,7 +759,6 @@ namespace Defend.Unity
                     cachedConnectionEndPositions[index] !=
                         endPosition;
 
-                // 端点变化时，必须强制更新位置。
                 if (startPositionChanged)
                 {
                     line.SetPosition(
@@ -776,8 +783,6 @@ namespace Defend.Unity
                     sourceId == lastSelectedId ||
                     targetId == lastSelectedId;
 
-                // 端点变化时不使用上一条连接的 related 缓存。
-                // endpointChanged 会强制进入这里。
                 if (endpointChanged ||
                     cachedConnectionRelated[index] !=
                         related)
@@ -821,7 +826,6 @@ namespace Defend.Unity
                         related;
                 }
 
-                // 最后保存端点身份。
                 cachedConnectionSourceIds[index] =
                     sourceId;
 
@@ -881,6 +885,9 @@ namespace Defend.Unity
 
             cachedConnectionRelated[index] =
                 false;
+
+            cachedConnectionActive[index] =
+                false;
         }
 
         private void ResetConnectionCaches()
@@ -918,8 +925,6 @@ namespace Defend.Unity
 
         private void OnDestroy()
         {
-            // 场景退出时子物体可能先被销毁；
-            // 销毁回调必须检查 Unity 对象是否仍然存在。
             transferPool?.Clear();
 
             foreach (
